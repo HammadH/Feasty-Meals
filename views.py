@@ -1,0 +1,58 @@
+from django.http import HttpResponse, HttpResponseRedirect, StreamingHttpResponse
+from django.views.generic import View
+from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth import authenticate, login
+from django.shortcuts import render_to_response
+from django.template import RequestContext
+
+from Users.models import User
+from Users.forms import UserRegistrationForm
+
+
+
+
+
+
+
+
+class HomeView(View):
+	def get(self, request, *args, **kwargs):
+		context = self.get_context()
+		return render_to_response('landing.html', context, RequestContext(request))
+
+
+
+	def post(self, request, *args, **kwargs):
+		if 'username' in request.POST:
+			loginForm = AuthenticationForm(request.POST)
+			if loginForm.is_valid():
+				
+				user = authenticate(loginForm.cleaned_data['username'], loginForm.cleaned_data['password'])
+				if user is not None:
+					if user.is_active():
+						return HttpResponseRedirect('/users/myaccount/')
+					else: return HttpResponse('Please activate your account!')
+				else: return HttpResponse('Incorrect email/password')	
+			else: return StreamingHttpResponse(loginForm.fields.values())
+			
+		else:
+			form = UserRegistrationForm(request.POST)
+			if form.is_valid():
+				full_name = form.cleaned_data['full_name']
+				email = form.cleaned_data['email']
+				password = form.cleaned_data['password']
+				address = form.cleaned_data['address']
+				mobile = form.cleaned_data['mobile']
+				new_user = User.objects.create_user(full_name, email, password, mobile, address)
+				new_user.save()
+				return HttpResponse('ok')
+			else:
+				return HttpResponse('invalid form')
+
+
+	def get_context(self):
+		context = {
+				'loginForm': AuthenticationForm(),
+				'registrationForm': UserRegistrationForm(),
+				}
+		return context

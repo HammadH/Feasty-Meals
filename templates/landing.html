@@ -1,0 +1,15 @@
+
+
+<form method="POST" action="{% url 'login' %}" >{% csrf_token %}
+{{loginForm.as_p}}
+
+<button type='submit'>Login</button>
+</form>
+
+
+
+<form method="POST">{% csrf_token %}
+{{registrationForm.as_p}}
+
+<button type='submit'>Register</button>
+</form>
