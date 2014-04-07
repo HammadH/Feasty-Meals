@@ -1,4 +1,7 @@
 from django.conf.urls import patterns, include, url
+from django.conf.urls.static import static
+from django.conf import settings
+
 from Users.views import RegistrationView, LoginView, LogoutView, AccountView
 
 
@@ -12,4 +15,5 @@ urlpatterns = patterns('',
     url(r'^myaccount/', AccountView.as_view(), name='myaccount'),
     url(r'^register/', RegistrationView.as_view(), name='registration'),
     
-)
+) +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+

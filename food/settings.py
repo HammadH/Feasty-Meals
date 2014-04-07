@@ -91,6 +91,17 @@ STATIC_URL = '/static/'
 
 LOGIN_URL = 'users/login/'
 
+MEDIA_ROOT = (
+    os.path.join(BASE_DIR, 'media'))
+
+MEDIA_URL = '/media/'
+
+
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, "static"),
+    )
+
+
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'))
 

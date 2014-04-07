@@ -1,4 +1,7 @@
+import os
+
 from django.db import models
+from django.contrib import admin
 from Users.models import User
 
 
@@ -18,9 +21,18 @@ PAYMENT_STATUS = (('1','PAID'),
 # MENU_TYPE = ('I':'Indian',
 # 			 'P':'Pakistani')
 
+def get_promo_image_path(instance, filename):
+	return os.path.join('Promotion', '%s' %instance, '%s' %filename)
 
 
+class Promotion(models.Model):
+	name = models.CharField(max_length=50, unique=True)
+	is_active = models.BooleanField(default=False)
+	date = models.DateTimeField(blank=True, null=True)
+	image = models.ImageField(upload_to=get_promo_image_path)
 
+	def __unicode__(self):
+		return self.name
 
 class PackageManager(models.Manager):
 	def create_new_package(self, user, package_type, package_billing_type):
@@ -55,6 +67,8 @@ class Package(models.Model):
 
 
 
+admin.site.register(Package)
+admin.site.register(Promotion)
 # class Menu(models.Model):
 # 	menu_type = models.ChoiceField()
 

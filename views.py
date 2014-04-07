@@ -7,7 +7,7 @@ from django.template import RequestContext
 
 from Users.models import User
 from Users.forms import UserRegistrationForm
-
+from Packages.models import Promotion
 
 
 
@@ -51,7 +51,16 @@ class HomeView(View):
 
 
 	def get_context(self):
-		context = {
+		try:
+			freemeal = Promotion.objects.get(name='freemeal')
+			context = {
+				'loginForm': AuthenticationForm(),
+				'registrationForm': UserRegistrationForm(),
+				'freemeal': freemeal
+				}
+		except Exception, e:
+			print e
+			context = {
 				'loginForm': AuthenticationForm(),
 				'registrationForm': UserRegistrationForm(),
 				}
