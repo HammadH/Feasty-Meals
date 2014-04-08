@@ -15,5 +15,5 @@ urlpatterns = patterns('',
     url(r'^myaccount/', AccountView.as_view(), name='myaccount'),
     url(r'^register/', RegistrationView.as_view(), name='registration'),
     
-) +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+) 
 

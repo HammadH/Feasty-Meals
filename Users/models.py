@@ -8,11 +8,6 @@ from django.core.mail import send_mail
 from django.core.exceptions import ValidationError
 
 
-
-
-
-
-
 class UserManager(BaseUserManager):
 	def create_user(self, full_name, email, password, mobile, address):
 			new_user = self.model(full_name=full_name, email=email,
@@ -25,10 +20,6 @@ class UserManager(BaseUserManager):
 				print e 
 				return None
 					
-		
-
-			
-
 	def create_superuser(self, email, password, mobile):
 		new_user = self.model(email=email)
 		new_user.set_password(password)
@@ -47,16 +38,11 @@ class UserManager(BaseUserManager):
  # 	auth_user=None, auth_password=None, connection=None, html_message=None)
 	
 	
-
-
-
 	def user_registered_notification_email(self, superuser, user):
 		pass
 
 	def user_activated_notification_email(self, superuser, user):
 		pass
-
-
 
 
 class User(AbstractBaseUser, PermissionsMixin):
@@ -92,9 +78,21 @@ class User(AbstractBaseUser, PermissionsMixin):
 	def get_email(self):
 		return self.email
 
+	def has_package(self):
+		if self.package.get():
+			return True
+		else: return False
 
+	def get_package(self):
+		if self.package.get():
+			return self.package.get()
+		else:
+			return None
 
-
+	def is_package_active(self):
+		if self.package.get().payment_status == 1:
+			return True
+		else: return False
 
 
 def send_activation_email(sender, instance, created, **kwargs):

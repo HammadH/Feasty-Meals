@@ -6,7 +6,7 @@ from django.shortcuts import render_to_response
 from django.template import RequestContext
 
 from Users.models import User
-from Users.forms import UserRegistrationForm
+from Users.forms import UserRegistrationForm, AuthForm
 from Packages.models import Promotion
 
 
@@ -54,14 +54,14 @@ class HomeView(View):
 		try:
 			freemeal = Promotion.objects.get(name='freemeal')
 			context = {
-				'loginForm': AuthenticationForm(),
+				'loginForm': AuthForm(),
 				'registrationForm': UserRegistrationForm(),
 				'freemeal': freemeal
 				}
 		except Exception, e:
 			print e
 			context = {
-				'loginForm': AuthenticationForm(),
+				'loginForm': AuthForm(),
 				'registrationForm': UserRegistrationForm(),
 				}
 		return context
