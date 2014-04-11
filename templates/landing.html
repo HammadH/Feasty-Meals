@@ -12,15 +12,15 @@
     <meta name="author" content="">
     <link rel="shortcut icon" href="{% static "img/favicon.png" %}">
 
-    <title>FLATTY - Free Bootstrap 3 Landing Page</title>
+    <title>Feasty Meals: Eat Healthy, Live Well</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     <!-- Bootstrap core CSS -->
    <!--  <link href="{% static "css/bootstrap.css" %}" rel="stylesheet"> -->
 
     <!-- Custom styles for this template -->
-    
-    <!-- <link href="{% static "css/main.css" %}" rel="stylesheet"> -->
+ <!--    
+    <link href="{% static "css/main.css" %}" rel="stylesheet"> -->
 
     <!-- Fonts from Google Fonts -->
 	<!-- <link href='http://fonts.googleapis.com/css?family=Lato:300,400,900' rel='stylesheet' type='text/css'> -->
@@ -34,13 +34,7 @@
     <![endif]-->
 
    <style type="text/css">
-h2{
-    margin: 0;     
-    color: #666;
-    padding-top: 90px;
-    font-size: 52px;
-    font-family: "trebuchet ms", sans-serif;    
-}
+
 .item{
     background: #333;    
     text-align: center;
@@ -68,7 +62,7 @@ h2{
             <span class="icon-bar"></span>
           </button>
           <img src="{% static "img/logo1.png" %}" class="pull-left" style="width:70px;height:50px;">
-          <a class="navbar-brand" href="#"><b>Feasty Meals</b></a>
+          <a class="navbar-brand" href="#"><b>Feasty Meals</b> Eat Healthy, Live Well</a>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -86,14 +80,18 @@ h2{
 		<div class="container">
 			<div class="row" style="margin-top:-40px">
 			<div class="col-lg-6" style="background-color:">
-				<h1>Eat Healthy, Live Well.</h1>
-				<h3>Healthy home cooked food delivered to you everyday!</h3>
+				<h2 style='text-align:center; color:#5E5E5E;'>Healthy & fresh food daily.</h2>
+				<h4 style="color:#5E5E5E;">We believe in eating healthy food, and we also believe healthy food should not be expensive.</h4	>
+				<h4 style="color:#5E5E5E;">That's why we started <b>Feasty Meals</b>, to deliver fresh & healthy home cooked food to busy people in Dubai.</h4>
+				
 			</div>
 			
-			
+			<div class="col-lg-3">
+				<img src="{% static "img/chef-says-ok.png" %}" style="width:150px; height:150px;">
+				</div>
 		</div><!-- /row -->
 		<div class="row" style="margin-top; background-color:#FF9900;">
-		<div class="col-lg-6"  style="margin-top:;">
+		<div class="col-lg-8"  style="margin-top:;">
 			
 			<! -- CAROUSEL -->
 		
@@ -103,6 +101,9 @@ h2{
 				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
 				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
 				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="5"></li>
 				  </ol>
 				
 				  <!-- Wrapper for slides -->
@@ -112,33 +113,73 @@ h2{
                   <h3>No more worries of ordering everyday!</h3>
                   
                 </div>
-				      <img src="{% static "img/food4.jpg" %}" alt="">
+				      <img src="{% static "img/dal.JPG" %}" alt="">
 				    </div>
+				   
+
 				    <div class="item">
 				    	<div class="carousel-caption">
-                  <h3>Fresh healthy food delivered daily</h3>
+                  <h3 style='color:'>Fresh healthy food delivered daily</h3>
                   
                 </div>
-				      <img src="{% static "img/food5.jpg" %}" alt="">
+				      <img src="{% static "img/meal.JPG" %}" alt="">
 				    </div>
+				   
+
 				    <div class="item">
 				    	<div class="carousel-caption">
                   <h3>There's nothing like home cooked food.</h3>
                   
                 </div>
-				      <img src="{% static "img/fresh3.jpg" %}" alt="">
+				      <img src="{% static "img/puloa.jpg" %}" alt="">
 				    </div>
+
+
+				    <div class="item">
+				    	<div class="carousel-caption">
+                  <h3 style='color:'>Quality oil only. No compromise on this one.</h3>
+                  		
+                </div>
+				      
+				      <img src="{% static "img/parata.jpg" %}" alt="">
+				    </div>
+
+
+				    <div class="item">
+				    	<div class="carousel-caption">
+                  <h3 style='color:'>Dedicated to taste and nutrition</h3>
+                  
+                </div>
+				      <img src="{% static "img/rice.JPG" %}" alt="">
+				    </div>
+
+				    <div class="item">
+				    	<div class="carousel-caption">
+                  <h3 style=''>Something special on weekends</h3>
+                  
+                </div>
+				      <img src="{% static "img/no-oil.jpg" %}" alt="">
+				    </div>
+
+
+
 				  </div>
+				  
+
+				  
 				</div>			
+				<h4><b>Why Feasty Meals?</b></h4>
+				<p>Like you we were fed up of eating unhealthy restaurant everyday. Being working class people ourselves, we know how important it is to eat healthy. But like most us, there is no time to cook and end up ordering restaurant food everytime. This has effected our health besides being expensive & troublesome to decide and order everytime.</p>
+				<p>Thats why we decided to start Feasty Meals, to provide fresh & healthy food for the working class people in Dubai.</p>   
 			</div><!-- /row -->
 	<!-- <div class="row" style="background-color:orange; margin-top:-600px;" >
 			<img class="img-responsive" src="{% static "img/food4.jpg" %}" alt="">
 			</div><!-- /col-lg-6 --> 
 		
-			<div class="col-lg-6 col-offset-6" style="background-color:; margin-top:-100px;">
+			<div class="col-lg-4 col-offset-1" style="background-color:; margin-top:-100px;">
 				<div class="well" style="padding:10px">
-				<h1>Sign Up for a Free Meal!</h1>
-					<form method="POST" class="form-vertical" role="form">{% csrf_token %}
+				<h2 style="color:#5E5E5E;">Sign Up for a <b style='color:red'>Free Meal!</b></h2>
+					<form method="POST" class="form-vertical">{% csrf_token %}
 					  <div class="form-class">
 					  	{% bootstrap_form registrationForm  %}
 						</div>
@@ -156,7 +197,10 @@ h2{
 			
 		</div><!-- /container -->
 	</div><!-- /headerwrap -->
-	<div class="container">
+
+<div class="container">
+		<hr>
+			<h2 style='text-align:center; color:#4C4C4C;'>Feasty Meals Packages</h2>
 		<hr>
 		
 	</div><!-- /container -->
@@ -171,119 +215,128 @@ h2{
 		
 		<div class="row mt centered">
 			<div class="col-lg-4">
-				<img src="{% static "img/fp3.jpg" %}" width="180" alt="">
-				<h4>Different Meals Everyday.</h4>
-				<p>We have created a menu that gives you well balanced diet to take care of nutritional values of the body.</p>
+				<img src="{% static "img/fp3.jpg" %}" width="280" alt="">
+				<h4>Indian</h4>
+				<p>Select a monthly package and food will be delivered to you on time, everyday.</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img src="{% static "img/homefood.jpg" %}" width="180" alt="">
-				<h4>Its Home Cooked!</h4>
+				<img src="{% static "img/nooil.jpg" %}" width="280" alt="">
+				<h4>Pakistani</h4>
 				<p>Yes! Seriously! All food is cooked at home with health & hygeine as a top priority. We use pure ingredients and cook well. Less oil and pure ingridients make our food nutritious and gentle on stomach</p>
 
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img src="{% static "img/fresh3.jpg" %}" width="180" alt="">
-				<h4>Its Cheap! Way Too Cheap!</h4>
-				<p>We believe healthy food is a necessity, not a luxury. Eating healthy leads to a better life. That is why we do not charge for extra taxes like restaurant rents or waiter salaries. Instead we buy and use fresh stuff with the money you pay to make the meals healthier and nutritious</p>
+				<img src="{% static "img/cost1.jpg" %}" width="280" alt="">
+				<h4><b>Arabic</b></h4>
+				<p>We believe healthy food is a necessity, not a luxury. That is why we do not charge for extra taxes like restaurant rents or waiter salaries. Instead we buy and use fresh stuff with the money you pay to make the meals healthier and nutritious</p>
 
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
 	</div><!-- /container -->
-	
-	<div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
-			</div>
-			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-		<hr>
-	</div><!-- /container -->
-	
-	<div class="container">
-		<div class="row mt centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Flatty is for Everyone.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
-			</div>
-		</div><!-- /row -->
-	
-		
-	</div><! --/container -->
-	
-	<div class="container">
-		<hr>
-		<div class="row centered">
-			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
-				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
-				  </div>
-				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
-			</div>
-			<div class="col-lg-3"></div>
-		</div><!-- /row -->
-		<hr>
-	</div><!-- /container -->
+
 
 	<div class="container">
-		<div class="row mt centered">
+		<hr>
+			<h2 style='text-align:center; color:#4C4C4C;'>About Feasty Meals</h2>
+		<hr>
+		
+	</div><!-- /container -->
+	
+	<div class="container">
+		<!-- <div class="row mt centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<h1>Our Awesome Team.<br/>Design Lovers.</h1>
-				<h3>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</h3>
+				<h1>Eat Healthy,<br/>Live Well.</h1>
+				<h3>Healthy home cooked food delivered to you everyday, on time!</h3>
 			</div>
-		</div><!-- /row -->
+		</div><!-- /row --> 
 		
 		<div class="row mt centered">
 			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic1.jpg" width="140" alt="">
-				<h4>Michael Robson</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+				<img src="{% static "img/fp3.jpg" %}" width="280" alt="">
+				<h4>Pay monthly, eat everyday.</h4>
+				<p>Select a monthly package and food will be delivered to you on time, everyday.</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic2.jpg" width="140" alt="">
-				<h4>Pete Ford</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+				<img src="{% static "img/nooil.jpg" %}" width="280" alt="">
+				<h4>It's Home Cooked!</h4>
+				<p>Yes! Seriously! All food is cooked at home with health & hygeine as a top priority. We use pure ingredients and cook well. Less oil and pure ingridients make our food nutritious and gentle on stomach</p>
+
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
-				<img class="img-circle" src="assets/img/pic3.jpg" width="140" alt="">
-				<h4>Angelica Finning</h4>
-				<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever.</p>
-				<p><i class="glyphicon glyphicon-send"></i> <i class="glyphicon glyphicon-phone"></i> <i class="glyphicon glyphicon-globe"></i></p>
+				<img src="{% static "img/cost1.jpg" %}" width="280" alt="">
+				<h4><b>It's Inexpensive</b></h4>
+				<p>We believe healthy food is a necessity, not a luxury. That is why we do not charge for extra taxes like restaurant rents or waiter salaries. Instead we buy and use fresh stuff with the money you pay to make the meals healthier and nutritious</p>
+
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
 	</div><!-- /container -->
+
+	<div class="container">
+		<!-- <div class="row mt centered">
+			<div class="col-lg-6 col-lg-offset-3">
+				<h1>Eat Healthy,<br/>Live Well.</h1>
+				<h3>Healthy home cooked food delivered to you everyday, on time!</h3>
+			</div>
+		</div><!-- /row --> 
+		
+		<div class="row mt centered">
+			<div class="col-lg-4">
+				<img src="{% static "img/nonoil.jpg" %}" width="280" alt="">
+				<h4>The best oils only.</h4>
+				<p>Our food is non-oily and non-spicy. We only use the best and pure oils available in the market.</p>
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<img src="{% static "img/hygene.jpg" %}" width="280" alt="">
+				<h4>Its hygeinic</h4>
+				<p>Since all the food is cooked at home, we keep the kitchen as clean and hygenic as possible. Because we too eat the same food, we make a lot of effort to be hygenic.<p>
+
+			</div><!--/col-lg-4 -->
+
+			<div class="col-lg-4">
+				<img src="{% static "img/meal.JPG" %}" width="280" alt="">
+				<h4>Different meals everyday</h4>
+				<p>Our menu has been curated such that we eat balanced food throught the month. Every meal is well proportioned and provides over all nutrition and health.</p>
+
+			</div><!--/col-lg-4 -->
+		</div><!-- /row -->
+	</div><!-- /container -->
+
+
+	
+	<div class="hero" style="background-color:yellow; height:100px;">
+	</div>
+	<div class="hero" style="background-color:yellow; height:100px;">
+		<div class="col-lg-4"
+
+	</div>
+	<div class="hero" style="background-color:yellow; height:100px;">
+	</div>
 	
 	<div class="container">
 		<hr>
 		<div class="row centered">
 			<div class="col-lg-6 col-lg-offset-3">
-				<form class="form-inline" role="form">
+				<!-- <form class="form-inline" role="form">
 				  <div class="form-group">
 				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter your email address">
 				  </div>
 				  <button type="submit" class="btn btn-warning btn-lg">Invite Me!</button>
-				</form>					
+				</form>		 -->			
 			</div>
 			<div class="col-lg-3"></div>
 		</div><!-- /row -->
 		<hr>
-		<p class="centered">Created by BlackTie.co - Attribution License 3.0 - 2013</p>
+		<p class="centered">FEASTY MEALS </p>
 	</div><!-- /container -->
+
+
 	
+
 
     <!-- Bootstrap core JavaScript
     ================================================== -->
