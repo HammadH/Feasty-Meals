@@ -80,9 +80,9 @@
 		<div class="container">
 			<div class="row" style="margin-top:-40px">
 			<div class="col-lg-6" style="background-color:">
-				<h2 style='text-align:center; color:#5E5E5E;'>Healthy & fresh food daily.</h2>
-				<h4 style="color:#5E5E5E;">We believe in eating healthy food, and we also believe healthy food should not be expensive.</h4	>
-				<h4 style="color:#5E5E5E;">That's why we started <b>Feasty Meals</b>, to deliver fresh & healthy home cooked food to busy people in Dubai.</h4>
+				<h3 style='text-align:center; color:#5E5E5E;'>Fresh & Healthy Home Food.<br><b>Pay once, eat everyday!</b></h3>
+				<h4 style="text-align:center; color:;">We believe in eating healthy food, and we also believe healthy food should not be expensive.</h4>
+				<h4 style="text-align:center; color:#434343;">That's why we started <b>Feasty Meals</b>, to deliver fresh & healthy home cooked food to busy people in Dubai.</h4>
 				
 			</div>
 			
@@ -176,7 +176,8 @@
 			<img class="img-responsive" src="{% static "img/food4.jpg" %}" alt="">
 			</div><!-- /col-lg-6 --> 
 		
-			<div class="col-lg-4 col-offset-1" style="background-color:; margin-top:-100px;">
+			<div class="col-lg-4 col-offset-1" style="background-color:; margin-top:-150px;">
+				<div class="alert alert-danger" style="text-align:center">Last <b>{{limit}}</b> Free Meals left for <b>Dubai Marina</b></div>
 				<div class="well" style="padding:10px">
 				<h2 style="color:#5E5E5E;">Sign Up for a <b style='color:red'>Free Meal!</b></h2>
 					<form method="POST" class="form-vertical">{% csrf_token %}
@@ -227,10 +228,6 @@
 
 			</div><!--/col-lg-4 -->
 
-			<div class="col-lg-4">
-				<img src="{% static "img/cost1.jpg" %}" width="280" alt="">
-				<h4><b>Arabic</b></h4>
-				<p>We believe healthy food is a necessity, not a luxury. That is why we do not charge for extra taxes like restaurant rents or waiter salaries. Instead we buy and use fresh stuff with the money you pay to make the meals healthier and nutritious</p>
 
 			</div><!--/col-lg-4 -->
 		</div><!-- /row -->
@@ -255,8 +252,8 @@
 		<div class="row mt centered">
 			<div class="col-lg-4">
 				<img src="{% static "img/fp3.jpg" %}" width="280" alt="">
-				<h4>Pay monthly, eat everyday.</h4>
-				<p>Select a monthly package and food will be delivered to you on time, everyday.</p>
+				<h4>Pay weekly, eat everyday.</h4>
+				<p>Select a weekly package and food will be delivered to you on time, everyday.</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
@@ -286,13 +283,13 @@
 		<div class="row mt centered">
 			<div class="col-lg-4">
 				<img src="{% static "img/nonoil.jpg" %}" width="280" alt="">
-				<h4>The best oils only.</h4>
+				<h4>It's non-oily and non-spicy</h4>
 				<p>Our food is non-oily and non-spicy. We only use the best and pure oils available in the market.</p>
 			</div><!--/col-lg-4 -->
 
 			<div class="col-lg-4">
 				<img src="{% static "img/hygene.jpg" %}" width="280" alt="">
-				<h4>Its hygeinic</h4>
+				<h4>It's hygeinic</h4>
 				<p>Since all the food is cooked at home, we keep the kitchen as clean and hygenic as possible. Because we too eat the same food, we make a lot of effort to be hygenic.<p>
 
 			</div><!--/col-lg-4 -->

@@ -6,6 +6,7 @@ from django.utils import timezone
 from django.utils.translation import ugettext_lazy as _
 from django.core.mail import send_mail
 from django.core.exceptions import ValidationError
+from django.template.loader import render_to_string
 
 
 class UserManager(BaseUserManager):
@@ -97,19 +98,23 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 def send_activation_email(sender, instance, created, **kwargs):
 		if created:
-			subject = "Activate your account."
-			message = "hi this is message"
-			from_email = "hammadsyed9@gmail.com"
-			recipient_list = [instance.email]
+			subject = "New Customer Registered"
+			message = render_to_string('email_message.html', {'user':instance})
+			from_email = "hello@feastymeals.com"                 #common email to send out emails from feastymeals
+			recipient_list = ['registrations@feastymeals.com']   #this will be my email for user infos
 			
+			subject_to_user = "Hello there!"
+			message_to_user = render_to_string('user_email_message.html', {'user':instance})
+			recipient_user = [instance.email]
 			try:
+				print "new user created"
 				send_mail(subject, message, from_email, recipient_list)
-				return
+				send_mail(subject_to_user, message_to_user, from_email, recipient_user )
+				
 			except Exception, e:
 				print e
-				return
+				
 		else:
-			print "old user modified"
 			return
 		
 
