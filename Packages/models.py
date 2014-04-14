@@ -10,10 +10,10 @@ PACKAGE_TYPE = (('I','Indian'),
 				('P','Pakistani'),
 				('Mixed','MIXED'),)
 
-PACKAGE_BILLING_TYPE = (('1', '1 Month'),
-						('2', '2 Months'),
-						('3', '3 Months'),
-						('6', '6 Months'))
+PACKAGE_BILLING_TYPE = (('1W', '1 Week'),
+						('2W', '2 Weeks'),
+						('3W', '3 Weeks'),
+						('1M', '1 Month'))
 						
 PAYMENT_STATUS = (('1','PAID'),
 				  ('0','NOT-PAID'))

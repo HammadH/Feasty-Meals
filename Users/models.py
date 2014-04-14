@@ -9,9 +9,11 @@ from django.core.exceptions import ValidationError
 from django.template.loader import render_to_string
 
 
+
+
 class UserManager(BaseUserManager):
-	def create_user(self, full_name, email, password, mobile, address):
-			new_user = self.model(full_name=full_name, email=email,
+	def create_user(self, full_name, free_meal_package, email, password, mobile, address):
+			new_user = self.model(full_name=full_name, free_meal_package=free_meal_package, email=email,
 								mobile=mobile, address=address)
 			new_user.set_password(password)
 			try:
@@ -49,6 +51,7 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
 	full_name = models.CharField(max_length=100, blank=False)
 	email = models.EmailField(unique=True, blank=False)
+	free_meal_package = models.CharField(blank=False, max_length=40, null=True)
 	mobile = models.CharField(unique=True, blank=False, max_length=10)
 	address = models.TextField()
 
