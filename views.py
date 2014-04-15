@@ -48,7 +48,9 @@ class HomeView(View):
 				new_user.save()
 				return HttpResponse('ok')
 			else:
-				return HttpResponse(form.errors)
+				context = self.get_context()
+				context['registrationForm'] = UserRegistrationForm(request.POST)
+				return render_to_response('landing.html',  context, RequestContext(request))
 
 
 	def get_context(self):
