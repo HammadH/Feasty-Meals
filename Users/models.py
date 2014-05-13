@@ -8,14 +8,16 @@ from django.core.mail import send_mail
 from django.core.exceptions import ValidationError
 from django.template.loader import render_to_string
 
+from Packages.models import Package
 
 
 
 class UserManager(BaseUserManager):
-	def create_user(self, full_name, free_meal_package, email, password, mobile, address):
-			new_user = self.model(full_name=full_name, free_meal_package=free_meal_package, email=email,
-								mobile=mobile, address=address)
+	def create_user(self, full_name, meal_package, email, password, mobile, area, building, room):
+			new_user = self.model(full_name=full_name, email=email, meal_package=meal_package,
+								mobile=mobile, area_name=area, building_name=building, room_no=room)
 			new_user.set_password(password)
+
 			try:
 				new_user.save()
 				return new_user
@@ -51,9 +53,12 @@ class UserManager(BaseUserManager):
 class User(AbstractBaseUser, PermissionsMixin):
 	full_name = models.CharField(max_length=100, blank=False)
 	email = models.EmailField(unique=True, blank=False)
-	free_meal_package = models.CharField(blank=False, max_length=40, null=True)
+	meal_package = models.ForeignKey(Package, null=True, blank=False)
 	mobile = models.CharField(unique=True, blank=False, max_length=10)
-	address = models.TextField()
+	area_name = models.TextField(blank=False, null=True, max_length=70)
+	building_name = models.TextField(blank=False, null=True, max_length=70)
+	room_no = models.TextField(blank=False, null=True, max_length=70)
+
 
 	date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 

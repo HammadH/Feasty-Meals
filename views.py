@@ -38,16 +38,20 @@ class HomeView(View):
 		else:
 			form = UserRegistrationForm(request.POST)
 			if form.is_valid():
+				print "valid"
 				full_name = form.cleaned_data['full_name']
-				free_meal_package = form.cleaned_data['free_meal_package']
+				meal_package = form.cleaned_data['meal_package']
 				email = form.cleaned_data['email']
 				password = form.cleaned_data['password']
-				address = form.cleaned_data['address']
 				mobile = form.cleaned_data['mobile']
-				new_user = User.objects.create_user(full_name, free_meal_package, email, password, mobile, address)
+				area = form.cleaned_data['area_name']
+				building = form.cleaned_data['building_name']
+				room = form.cleaned_data['room_no']
+				new_user = User.objects.create_user(full_name, meal_package, email, password, mobile, area, building, room)
 				new_user.save()
 				return HttpResponse('ok')
 			else:
+				print "invalid"
 				context = self.get_context()
 				context['registrationForm'] = UserRegistrationForm(request.POST)
 				return render_to_response('landing.html',  context, RequestContext(request))

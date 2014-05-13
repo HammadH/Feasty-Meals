@@ -15,7 +15,6 @@ from django.utils.decorators import method_decorator
 from Users.forms import UserRegistrationForm
 from Users.models import User
 from Packages.models import Package
-from Packages.forms import PackageForm
 
 
 class LoginRequiredMixin(object):
@@ -80,7 +79,7 @@ class AccountView(LoginRequiredMixin, View):
 			context['package']= request.user.package.get()
 		except Package.DoesNotExist:
 			context['package_message']= u"you do not have any package"
-			context['packageForm'] = PackageForm()
+			
 		
 		return render_to_response('account.html', context, RequestContext(request))
 
