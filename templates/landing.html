@@ -47,6 +47,32 @@
 .bs-example{
 	margin: 20px;
 }
+
+.bs-wizard {margin-top: 40px;}
+
+/*Form Wizard*/
+.bs-wizard {border-bottom: solid 1px #e0e0e0; padding: 0 0 10px 0;}
+.bs-wizard > .bs-wizard-step {padding: 0; position: relative;}
+.bs-wizard > .bs-wizard-step + .bs-wizard-step {}
+.bs-wizard > .bs-wizard-step .bs-wizard-stepnum {color: #595959; font-size: 16px; margin-bottom: 5px;}
+.bs-wizard > .bs-wizard-step .bs-wizard-info {color: #999; font-size: 14px;}
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot {position: absolute; width: 30px; height: 30px; display: block; background: #fbe8aa; top: 45px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;} 
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot-green {position: absolute; width: 30px; height: 30px; display: block; background: #33CC33; top: 45px; left: 50%; margin-top: -15px; margin-left: -15px; border-radius: 50%;} 
+
+.bs-wizard > .bs-wizard-step > .bs-wizard-dot:after {content: ' '; width: 14px; height: 14px; background: #fbbd19; border-radius: 50px; position: absolute; top: 8px; left: 8px; } 
+.bs-wizard > .bs-wizard-step > .progress {position: relative; border-radius: 0px; height: 8px; box-shadow: none; margin: 20px 0;}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar {width:0px; box-shadow: none; background: #fbe8aa;}
+.bs-wizard > .bs-wizard-step > .progress > .progress-bar-green {width:0px; box-shadow: none; background: #009900;}
+.bs-wizard > .bs-wizard-step.complete > .progress > .progress-bar {width:100%;}
+.bs-wizard > .bs-wizard-step.active > .progress > .progress-bar {width:50%;}
+.bs-wizard > .bs-wizard-step:first-child.active > .progress > .progress-bar {width:0%;}
+.bs-wizard > .bs-wizard-step:last-child.active > .progress > .progress-bar {width: 100%;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot {background-color: #f5f5f5;}
+.bs-wizard > .bs-wizard-step.disabled > .bs-wizard-dot:after {opacity: 0;}
+.bs-wizard > .bs-wizard-step:first-child  > .progress {left: 50%; width: 50%;}
+.bs-wizard > .bs-wizard-step:last-child  > .progress {width: 50%;}
+.bs-wizard > .bs-wizard-step.disabled a.bs-wizard-dot{ pointer-events: none; }
+/*END Form Wizard*/
 </style>
 
   </head>
@@ -236,13 +262,58 @@
 		</div><!-- /container -->
 	</div><!-- /headerwrap -->
 </div>
-
+<div class="container">
+		
+        
+            <div class="row bs-wizard" style="border-bottom:0;">
+                
+                <div class="col-xs-3 bs-wizard-step complete">
+                  <div class="text-center bs-wizard-stepnum">REGISTER</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">We offer VEG, NON-VEG and FITNESS Packages. Choose your package and sign up!</div>
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum">ACTIVATE & CONFIRM</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Nam mollis tristique erat vel tristique. Aliquam erat volutpat. Mauris et vestibulum nisi. Duis molestie nisl sed scelerisque vestibulum. Nam placerat tristique placerat</div>
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum">PAY ONCE ON DELIVERY</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Nam mollis tristique erat vel tristique. Aliquam erat volutpat. Mauris et vestibulum nisi. Duis molestie nisl sed scelerisque vestibulum. Nam placerat tristique placerat</div>
+                </div>
+                
+                <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
+                  <div class="text-center bs-wizard-stepnum">EAT EVERYDAY</div>
+                  <div class="progress"><div class="progress-bar"></div></div>
+                  <a href="#" class="bs-wizard-dot"></a>
+                  <div class="bs-wizard-info text-center">Nam mollis tristique erat vel tristique. Aliquam erat volutpat. Mauris et vestibulum nisi. Duis molestie nisl sed scelerisque vestibulum. Nam placerat tristique placerat</div>
+                </div>
+            </div>
+        
+        
+        
+        
+        
+	</div>
+</div>
+	
 <div class="container">
 		<hr>
 			<h3 style='text-align:center; color:#4C4C4C;'><b><i>Our Packages</i></b></h3><h5 style='text-align:center; color:#4C4C4C;'>Our delicious dinners to offer nutritious meals all week long</h5>
 		<hr>
 		
 	</div><!-- /container -->
+
+
+
+
+
 
 	<div class="container">
     <div class="row">
@@ -345,47 +416,40 @@
         </div>
     </div>
 </div>
-<div id="c" style="margin-top:50px">
-		<div class="container">
-			<p style="color:#00ccdd"> </p>
-		
-		</div>
-	</div>
-
-	<div class='container'>
-<div class="row" style="height:100px;">
-	<hr>
-	<h3 style='text-align:center; color:#4C4C4C;'><b><i>Our Food</i></b></h3><h5 style='text-align:center;'><h5 style='text-align:center; color:#4C4C4C;'>Every meal provides these values</h5><br>
-
-	<hr>
-	</div>
 </div>
+<div id="skills" style="height:5px;">
+		
+<div class="row" style="background-color:white; " >
+	
+	<h3 style='text-align:center; color:#4C4C4C;'><b><i>Our Food</i></b></h3><h5 style='text-align:center;'><h5 style='text-align:center; color:#4C4C4C;'>Every meal is cooked with these values</h5><br>
+
+	<hr>
+	</div>
+</div>	
+	
+
+
 <div id="w">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-3 ">
 				<img src="{% static "img/fresh.png" %}" class='img-circle'style="width:150px;height:150px;">
-				<h4>WELCOME TO <bold>ONASSIS</bold>. <bold>A FREE BOOTSTRAP 3</bold> THEME. CRAFTED WITH LOVE BY <bold>BLACKTIE.CO</bold>. <br/>
-					<bold>IDEAL FOR</bold> AGENCIES & FREELANCERS.
+				<h4>FRESH<bold> INGREDIENTS</bold>
 				</h4>
 				</div>
 				<div class="col-lg-3 ">
-				<img src="{% static "img/healthy.jpg" %}" style="width:170px;height:150px;">
-				<h3>WELCOME TO <bold>ONASSIS</bold>. <bold>A FREE BOOTSTRAP 3</bold> THEME. CRAFTED WITH LOVE BY <bold>BLACKTIE.CO</bold>. <br/>
-					<bold>IDEAL FOR</bold> AGENCIES & FREELANCERS.
-				</h3>
-				</div>
-				<div class="col-lg-3 ">
-				<img src="{% static "img/pro-health.png" %}" class='img-circle'style="width:150px;height:150px;">
-				<h3>WELCOME TO <bold>ONASSIS</bold>. <bold>A FREE BOOTSTRAP 3</bold> THEME. CRAFTED WITH LOVE BY <bold>BLACKTIE.CO</bold>. <br/>
-					<bold>IDEAL FOR</bold> AGENCIES & FREELANCERS.
-				</h3>
+				<img src="{% static "img/healthapple.jpg" %}" style="width:140px;height:150px;">
+				<h4>NON OILY, <bold>NON SPICY</bold> 
+				</h4>
 				</div>
 				<div class="col-lg-3 ">
 				<img src="{% static "img/nutritious.jpg" %}" class='img-circle'style="width:150px;height:150px;">
-				<h3>WELCOME TO <bold>ONASSIS</bold>. <bold>A FREE BOOTSTRAP 3</bold> THEME. CRAFTED WITH LOVE BY <bold>BLACKTIE.CO</bold>. <br/>
-					<bold>IDEAL FOR</bold> AGENCIES & FREELANCERS.
-				</h3>
+				<h4>BALANCED <bold>NUTRITION</bold>
+				</h4>
+				</div>
+				<div class="col-lg-3 ">
+				<img src="{% static "img/cost1.jpg" %}" class='img-circle'style="width:150px;height:150px;">
+				<h4>SAVE<bold> MONEY</bold></h4>
 				</div>
 			</div>
 		</div><!-- /container -->
@@ -403,23 +467,16 @@
 					<br>
 					<div class="col-lg-4">
 						<h3><b>Send Us A Message:</b></h3>
-						<h3 style="color:#00ccdd">fitness@pro-meals.com</h3>
+						<h3 style="color:#ff4411">eat@feastymeals.com</h3>
 						<br>
+					</div>
+				
+					<div class="col-lg-4">	
 					</div>
 					
 					<div class="col-lg-4">	
 						<h3><b>Call Us:</b></h3>
-						<h3 style="color:#00ccdd">+971 552051031</h3>
-						<br>
-					</div>
-					
-					<div class="col-lg-4">
-						<h3><b>We Are Social</b></h3>
-						<p>
-							<a href="index.html#"><i class="icon-facebook"></i></a>
-							<a href="index.html#"><i class="icon-twitter"></i></a>
-							<a href="index.html#"><i class="icon-envelope"></i></a>
-						</p>
+						<h3 style="color:#ff4411;">+971 552051031</h3>
 						<br>
 					</div>
 				</div>
@@ -429,7 +486,7 @@
 	
 	<div id="c">
 		<div class="container">
-			<p style="color:#00ccdd">PRO MEALS &#174 2014 </p>
+			<p style="color:#00ccdd">FEASY MEALS &#174 2014, An Indian Coffee House service.</p>
 		
 		</div>
 	</div>
