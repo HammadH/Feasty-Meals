@@ -62,7 +62,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
 	date_joined = models.DateTimeField(_('date joined'), default=timezone.now)
 
-	is_active = models.BooleanField(default=False)
+	is_active = models.BooleanField(default=True)
 	is_staff = models.BooleanField(default=False)
 
 	USERNAME_FIELD = 'email'
@@ -88,7 +88,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 		return self.email
 
 	def has_package(self):
-		if self.package.get():
+		if self.meal_package:
 			return True
 		else: return False
 

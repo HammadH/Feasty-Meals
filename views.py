@@ -49,7 +49,7 @@ class HomeView(View):
 				room = form.cleaned_data['room_no']
 				new_user = User.objects.create_user(full_name, meal_package, email, password, mobile, area, building, room)
 				new_user.save()
-				return HttpResponse('ok')
+				return HttpResponseRedirect('after_register')
 			else:
 				print "invalid"
 				context = self.get_context()
@@ -72,3 +72,19 @@ class HomeView(View):
 				'registrationForm': UserRegistrationForm(),
 				}
 		return context
+
+class SuccessView(View):
+	def get(self, request, *args, **kwargs):
+		return render_to_response('after_register.html')
+
+class VegView(View):
+	def get(self, request, *args, **kwargs):
+		return render_to_response('veg.html')
+
+class NonVegView(View):
+	def get(self, request, *args, **kwargs):
+		return render_to_response('nonveg.html')
+
+class FitnessView(View):
+	def get(self, request, *args, **kwargs):
+		return render_to_response('fitness.html')

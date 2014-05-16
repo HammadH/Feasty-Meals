@@ -14,7 +14,7 @@ from django.utils.decorators import method_decorator
 
 from Users.forms import UserRegistrationForm
 from Users.models import User
-from Packages.models import Package
+from Packages.models import Package, Payment
 
 
 class LoginRequiredMixin(object):
@@ -76,9 +76,16 @@ class AccountView(LoginRequiredMixin, View):
 	def get(self, request, *args, **kwargs):
 		context = {}
 		try:
-			context['package']= request.user.package.get()
+			context['package']= request.user.meal_package
+			
 		except Package.DoesNotExist:
 			context['package_message']= u"you do not have any package"
+
+		
+		if request.user.payment.all():
+			context['payment']=request.user.payment.latest('purchased_on')
+		else:
+			context['payment']= u"no pay"
 			
 		
 		return render_to_response('account.html', context, RequestContext(request))
