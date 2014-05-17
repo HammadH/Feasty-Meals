@@ -58,8 +58,7 @@ class PaymentManager(models.Manager):
 		return self
 
 class Payment(models.Model):
-	from Users.models import User
-	user = models.ForeignKey(User, related_name='payment')
+	user = models.ForeignKey('Users.User', related_name='payment')
 	package = models.ForeignKey(Package)
 	has_paid = models.BooleanField(default=False)
 	purchased_on = models.DateTimeField(auto_now_add=True, blank=True, null=True)
