@@ -63,12 +63,12 @@ WSGI_APPLICATION = 'food.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE':'django.db.backends.sqlite3',
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
         'NAME': 'foods',
-        # 'USER': 'foods',
-        # 'PASSWORD': 'foods123',
-        # 'HOST': '127.0.0.1',
-        # 'PORT': '5432',
+        'USER': 'hammad',
+        'PASSWORD': 'quakeroats9',
+        'HOST': '127.0.0.1',
+        'PORT': '',
     }
 }
 
