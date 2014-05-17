@@ -26,7 +26,7 @@ class AuthForm(AuthenticationForm):
 
 class UserRegistrationForm(forms.ModelForm):
 	full_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Your full name'}))
-	email = forms.CharField(widget=forms.EmailInput(attrs={'placeholder':'Activation email will be sent'}))
+	email = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Activation email will be sent'}))
 	password = forms.CharField(widget=forms.PasswordInput)
 	meal_package = forms.ModelChoiceField(queryset=Package.objects.all(), widget=forms.RadioSelect(), empty_label=None)
 	mobile = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'You will recieve a call on this number'}))
