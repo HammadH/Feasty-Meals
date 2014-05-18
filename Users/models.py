@@ -104,18 +104,17 @@ class User(AbstractBaseUser, PermissionsMixin):
 		else: return False
 
 
-def send_activation_email(sender, instance, created, **kwargs):
+def send_emails(sender, instance, created, **kwargs):
 		if created:
-			subject = "New Customer Registered"
+			subject = "New Registration"
 			message = render_to_string('email_message.html', {'user':instance})
-			from_email = "hello@feastymeals.com"                 #common email to send out emails from feastymeals
+			from_email = "eat@feastymeals.com"                 #common email to send out emails from feastymeals
 			recipient_list = ['registrations@feastymeals.com']   #this will be my email for user infos
 			
 			subject_to_user = "Hello there!"
 			message_to_user = render_to_string('user_email_message.html', {'user':instance})
 			recipient_user = [instance.email]
 			try:
-				print "new user created"
 				send_mail(subject, message, from_email, recipient_list)
 				send_mail(subject_to_user, message_to_user, from_email, recipient_user )
 				
@@ -129,7 +128,7 @@ def send_activation_email(sender, instance, created, **kwargs):
 
 
 
-signals.post_save.connect(send_activation_email, User, dispatch_uid= "new user registration")
+signals.post_save.connect(send_emails, User, dispatch_uid= "new user registration")
 
 
 
