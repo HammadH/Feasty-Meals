@@ -82,22 +82,23 @@
     <!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <div class="navbar-header">
+        <div class="navbar-header" >
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <h3><b><i>FEASTY MEALS</i></b></h4><p style="margin-top:-5px;">Everyday food for healthy living</p>
+          <h3 ><b><i>FEASTY MEALS</i></b></h4><p style="margin-top:-5px;">Everyday food for healthy living</p>
 		
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li style="margin-top:10px"><form class="form-inline" method="POST" action="{% url 'login' %}" >{% csrf_token %}
+            <!-- <li style="margin-top:10px"><form class="form-inline" method="POST" action="{% url 'login' %}" >{% csrf_token %}
 {% bootstrap_form loginForm %}
 
 <button type="submit" class="btn btn-primary btn-sm">Log In</button>
-</form></li>
+</form></li> -->
+          <li style="margin-top:20px"><div class="alert alert-danger" style="text-align:center; ">CALL <b>0552051031</b> or <b>SIGN UP</b> BELOW</div></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -224,8 +225,8 @@
 			</div><!-- /col-lg-6 --> 
 		
 			<div class="col-lg-4 " style="background-color:; margin-top;">
-				<div class="alert alert-danger" style="text-align:center; margin-top:-100px;">CALL <b>0552051031</b> or <b>SIGN UP</b> BELOW</div>
-				<div class="well" style="padding:10px">
+			
+				<div class="well" style="padding:10px; margin-top:-50px;">
 				<h3 style="color:#5E5E5E; text-align:center"><b>Sign Up to try a Meal</b> </h3>
 					<form method="POST" class="form-vertical">{% csrf_token %}
 						
@@ -262,10 +263,10 @@
 		</div><!-- /container -->
 	</div><!-- /headerwrap -->
 </div>
+ <h3 style='text-align:center; color:#4C4C4C;'><b><i>How it works</i></b></h3><br>
 <div class="container">
-		
-        
-            <div class="row bs-wizard" style="border-bottom:0;">
+		 <div class="row bs-wizard" style="border-bottom:0;">
+
                 
                 <div class="col-xs-3 bs-wizard-step complete">
                   <div class="text-center bs-wizard-stepnum"><b>REGISTER</b></div>
@@ -427,7 +428,7 @@
 		<hr>
 <div class="row" style="background-color:; " >
 	
-	<h3 style='text-align:center; color:#4C4C4C;'><b><i>Our Food</i></b></h3><h5 style='text-align:center;'><h5 style='text-align:center; color:#4C4C4C;'>Every meal is cooked with these values</h5><br>
+	
 
 	<hr>
 	</div>
@@ -438,6 +439,7 @@
 <div id="w">
 		<div class="container">
 			<div class="row">
+        <h3 style='text-align:center; color:#4C4C4C;'><b><i>Our Food</i></b></h3><h5 style='text-align:center;'><h5 style='text-align:center; color:#4C4C4C;'>Every meal is cooked with these values</h5><br>
 				<div class="col-lg-3 ">
 				<img src="{% static "img/fresh.png" %}" class='img-circle'style="width:150px;height:150px;">
 				<h4>FRESH<bold> INGREDIENTS</bold>
@@ -466,7 +468,7 @@
 			
 <!-- ========== FOOTER SECTION ========== -->
 	<section id="contact" name="contact"></section>
-	<div id="f">
+	<div id="">
 		<div class="container">
 			<div class="row">
 					<h3><b>CONTACT US FOR A QUICK MEAL</b></h3>

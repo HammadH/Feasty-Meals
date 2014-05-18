@@ -107,7 +107,10 @@ STATICFILES_DIRS = (
 TEMPLATE_DIRS = (
     os.path.join(BASE_DIR, 'templates'))
 
-EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-EMAIL_HOST = 'localhost'
-EMAIL_PORT = 1025
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.webfaction.com'
+EMAIL_HOST_USERNAME='feasty'
+EMAIL_HOST_PASSWORD = 'quakeroats9'
+DEFAULT_FROM_EMAIL = 'eat@feastymeals.com'
+SERVER_EMAIL = 'eat@feastymeals.com'
 
