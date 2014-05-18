@@ -1,3 +1,5 @@
+import logging
+
 from django.db import models
 from django.contrib import admin
 from django.contrib.auth.models import AbstractBaseUser, BaseUserManager, PermissionsMixin
@@ -119,7 +121,11 @@ def send_emails(sender, instance, created, **kwargs):
 				send_mail(subject_to_user, message_to_user, from_email, recipient_user )
 				
 			except Exception, e:
-				print e
+				logging.basicConfig(filename='/home/hammad/logs/feasty_email_logs.log', level=logging.DEBUG)
+				logging.debug(e)
+				
+
+				
 				
 		else:
 			return
