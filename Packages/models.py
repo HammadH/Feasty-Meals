@@ -96,6 +96,7 @@ class MealItem(models.Model):
 	pic = ImageField(upload_to=get_mealitem_image_path)
 	name = models.CharField(max_length=70)
 	meal = models.ForeignKey(Meal)
+	display_id = models.IntegerField(blank=True, null=True)
 
 	def __unicode__(self):
 		return self.name
