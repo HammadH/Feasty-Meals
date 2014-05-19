@@ -37,6 +37,7 @@
 
    <style type="text/css">
 
+
 .item{
     background: #333;    
     text-align: center;
@@ -136,29 +137,36 @@
 
 		
 		
-		<div class="row" style="margin-top:; background-color:;">
+		<div class="row" style="margin-top:";>
 		
 		<div class="col-lg-8"  style="margin-top:;">
 			<h4 style='text-align:center'><b>Today's Meals</b></h4>
-			  <div class="col-md-5 column productbox" style="margin:20px">
-        
-  
-    {% thumbnail meal_item.pic "460x250" crop='center' as im %}
-    <img src="{{im.url}}" width="{{im.width}}" height="im.height}}" class="img-responsive">
-    {% endthumbnail %}
+			  
+
+        <div class="col-md-5 column productbox" style="margin:20px">
+          
+          <h4 style='text-align:center'><b>Veg Meal</b></h4>
+          {% thumbnail veg_meal.pic "460x250" crop='center' as im %}
+        <img src="{{im.url}}" width="{{im.width}}" height="im.height}}" class="img-responsive">
+        {% endthumbnail %}
     
-    <div class="producttitle" style="text-align:center"><b>{{meal_item.name}}</b></div>
+    <div class="producttitle" style="text-align:center"><b>{{veg_meal.name}}</b></div>
     <div class="productprice"><div style="text-align:center; margin:15px;"><a href="#" class="btn btn-success btn-sm" role="button">View Veg Meals</a></div>
 </div>  
 </div>
-<div class="col-md-5 column productbox" style="margin:15px">
-    <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-    <div class="producttitle">Product 2</div>
-    <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
+  <div class="col-md-5 column productbox" style="margin:20px">
+          
+          <h4 style='text-align:center'><b>Non-Veg Meal</b></h4>
+          {% thumbnail nonveg_meal.pic "460x250" crop='center' as im %}
+        <img src="{{im.url}}" width="{{im.width}}" height="im.height}}" class="img-responsive">
+        {% endthumbnail %}
+    
+    <div class="producttitle" style="text-align:center"><b>{{nonveg_meal.name}}</b></div>
+    <div class="productprice"><div style="text-align:center; margin:15px;"><a href="#" class="btn btn-success btn-sm" role="button">View Non-Veg Meals</a></div>
+</div>  
 </div>
-
   
-  <h4 style='text-align:center'><b>WHY FEASTY MEALS?</b></h4>
+  <h4 style='text-align:center; margin:10px;'><b>WHY FEASTY MEALS?</b></h4>
 <h5 style="color:#7A7A7A"><b>WE BELIEVE IN EATING HEALTHY FOOD, AND WE ALSO BELIEVE HEALTHY FOOD SHOULD NOT BE EXPENSIVE.</b></h5>
         <h5><b>ACTIVE INDIVIDUALS NEED TO EAT THE RIGHT FOODS TO PERFORM WELL. EATING THE RIGHT FOOD FOR DINNER IS VITAL TO HEALTHY LIVING.</b></h5>
       <h5 style="color:#7A7A7A"><b>THAT'S WHY WE STARTED FEASTY MEALS, TO DELIVER FRESH & HEALTHY FOOD TO PEOPLE FOR A HEALTHY LIFE</b></h5>  

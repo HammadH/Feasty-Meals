@@ -97,6 +97,7 @@ class MealItem(models.Model):
 	name = models.CharField(max_length=70)
 	meal = models.ForeignKey(Meal)
 	display_id = models.IntegerField(blank=True, null=True)
+	is_veg = models.NullBooleanField(blank=True)
 
 	def __unicode__(self):
 		return self.name

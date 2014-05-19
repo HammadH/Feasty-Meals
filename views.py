@@ -1,3 +1,4 @@
+import datetime
 from django.http import HttpResponse, HttpResponseRedirect, StreamingHttpResponse
 from django.views.generic import View
 from django.contrib.auth.forms import AuthenticationForm
@@ -7,7 +8,7 @@ from django.template import RequestContext
 
 from Users.models import User
 from Users.forms import UserRegistrationForm, AuthForm
-from Packages.models import Promotion
+from Packages.models import MealItem
 
 
 
@@ -58,12 +59,22 @@ class HomeView(View):
 
 
 	def get_context(self):
+		today = datetime.date.today()
+		
 		try:
-			freemeal = Promotion.objects.get(name='freemeal')
+			
+			todays_meals = MealItem.objects.filter(display_id = today.day)
+			if todays_meals[0].is_veg:
+				veg_meal = todays_meals[0]
+				nonveg_meal = todays_meals[1]
+			else:
+				veg_meal = todays_meals[1]
+				nonveg_meal = todays_meals[0] 
 			context = {
 				'loginForm': AuthForm(),
 				'registrationForm': UserRegistrationForm(),
-				'freemeal': freemeal
+				'veg_meal': veg_meal,
+				'nonveg_meal': nonveg_meal
 				}
 		except Exception, e:
 			print e
