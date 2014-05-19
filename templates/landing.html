@@ -1,5 +1,6 @@
 {% load staticfiles %}
 {% load bootstrap3 %}
+{% load thumbnail %}
 
 
 <!DOCTYPE html>
@@ -139,11 +140,17 @@
 		
 		<div class="col-lg-8"  style="margin-top:;">
 			<h4 style='text-align:center'><b>Today's Meals</b></h4>
-			  <div class="col-md-5 column productbox" style="margin:15px">
-    <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
-    <div class="producttitle">Product 2</div>
-    <div class="productprice"><div class="pull-right"><a href="#" class="btn btn-danger btn-sm" role="button">BUY</a></div><div class="pricetext">£8.95</div></div>
+			  <div class="col-md-5 column productbox" style="margin:20px">
+        
+  
+    {% thumbnail meal_item.pic "460x250" crop='center' as im %}
+    <img src="{{im.url}}" width="{{im.width}}" height="im.height}}" class="img-responsive">
+    {% endthumbnail %}
+    
+    <div class="producttitle" style="text-align:center"><b>{{meal_item.name}}</b></div>
+    <div class="productprice"><div style="text-align:center; margin:15px;"><a href="#" class="btn btn-success btn-sm" role="button">View Veg Meals</a></div>
 </div>  
+</div>
 <div class="col-md-5 column productbox" style="margin:15px">
     <img src="http://placehold.it/460x250/e67e22/ffffff&text=HTML5" class="img-responsive">
     <div class="producttitle">Product 2</div>
