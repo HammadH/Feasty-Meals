@@ -121,7 +121,7 @@ def send_emails(sender, instance, created, **kwargs):
 				send_mail(subject_to_user, message_to_user, from_email, recipient_user )
 				
 			except Exception, e:
-				logging.basicConfig(filename='/home/hammad/logs/feasty_email_logs.log', level=logging.DEBUG)
+				logging.basicConfig(filename='feasty_email_logs.log', level=logging.DEBUG)
 				logging.debug(e)
 				
 
