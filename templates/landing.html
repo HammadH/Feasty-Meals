@@ -31,7 +31,7 @@
     
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>+
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 
@@ -106,21 +106,129 @@
       </div>
     </div>
 
-	<div id="headerwrap" style="margin-top:">
-		
-		<div id="skills" style='margin-top:0px;'>
-			<div id="w" style="height:150px">
-		<div class="container">
+
+			
+		<div class="container" style='margin-top:70px'>
 			<div class="row">
-				<div class="col-lg-8">
-				<h3>WELCOME TO <bold>FEASTY MEALS.</bold> <br><bold>WE DELIVER FRESH</bold> AND HEALTHY DINNER EVERYDAY.<br><h4>Choose a weekly package and food will be delivered everyday.</h4><h3>
+				<div class="col-lg-12">
+				<h3 style='text-align:center'>WELCOME TO <bold>FEASTY MEALS.</bold> <br><bold>WE DELIVER FRESH</bold> AND HEALTHY DINNER EVERYDAY.<br><h4 style='text-align:center'>Choose a weekly package and food will be delivered everyday.</h4></h3>
 					
+
+          <div class="container">
+    <div class="row">
+        <div class="col-sm-4 col-md-4" >
+            <h4 style='text-align:center; background-color:white;padding:15px;'><b>VEG PACKAGE</b></h4>
+            <div class="post">
+                <div class="post-img-content">
+                    <img src="{% static "img/puloa.jpg" %}" style="width:400px;height:250px;overflow:hidden;"/>
+                    <span class="post-title">
+                        <b>Different Meal Everyday</b><br>
+                      <b>Balanced Nutrition</b><br>
+                      <b>Low Fat</b><br>
+                      <b>Carbs</b><br>
+                      <b>Fruits & Veggies</b></span>
+                </div>
+                <div class="content">
+                  <div class="author">
+                        <b>Veg Package</b> |
+                       
+                    </div>
+                      <div style='text-align:center'>
+                      <b>Primary meal + Salad + Fresh juice</b></div>
+                      <hr>
+                      <div style='text-align:center'>
+                      <h4 ><b style='color:orange'>AED 149</b> for 7 MEALS</div>
+                      <hr>
+
+                    <div>
+                      This package is designed for <b>vegans</b> who love to stay <b>healthy and fit</b>. All the vegetables are <b>steam cooked</b> to retain their nutritional values and the meals are cooked with the <b>purest of oils.</b>
+                      </div>
+                    
+                    <hr>
+                  
+
+                    <div style='text-align:center'>
+                        <a href="{% url 'veg' %}" class="btn btn-warning btn-sm">View meals</a></div>
+                    </div>
+                </div>
+            </div>
+       
+        <div class="col-sm-4 col-md-4">
+          <h4 style='text-align:center; background-color:white;padding:15px;'><b>NON-VEG PACKAGE</b></h4>
+            <div class="post">
+                <div class="post-img-content">
+                    <img src="{% static "img/no-oil.jpg" %}" style="width:455px;height:250px;overflow:hidden;" class="img-responsive" />
+                    <span class="post-title">
+                        <b>Different Meal Everyday</b><br>
+                        <b>Balanced Nutrition</b><br>
+                      <b>Proteins</b><br>
+                      <b>Carbs</b><br>
+                      <b>Fruits & Veggies</b></span>
+                </div>
+                <div class="content">
+                    <div class="author">
+                         <b>Energy| Lean</b> |
+                        
+                    </div>
+                    <div style='text-align:center'>
+                      <b>Primary meal + Salad + Fresh juice</b></div>
+                      <hr>
+                      <div style='text-align:center'>
+                      <h4 ><b style='color:blue'>AED 169</b> for 7 MEALS</h4>
+                      <hr>
+                    
+                        This package offers delicious <b>non-vegetarion</b> meals with least amount of un-saturated fats. Although most of the meals are comprised of <b>chicken</b> and <b>mutton</b>, <b>fish, prawns and beef</b> are also included.
+                      <hr>
+                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4 col-md-4">
+          <h4 style='text-align:center; background-color:white;padding:15px;'><b>FITNESS PACKAGE</b></h4>
+            <div class="post">
+                <div class="post-img-content">
+                     <img src="{% static "img/s1.png" %}" style="width:455px;height:250px;overflow:hidden;" class="img-responsive" />
+                    <span class="post-title">
+                        <b>Calorie based</b><br>
+                      <b>Weight Gain Package</b><br>
+                      <b>Diet Package</b><br>
+                      <b>Get Lean Package</b><br>
+                      <b>Veg & Non-Veg</b></span>
+                </div>
+                <div class="content">
+                    <div class="author">
+                        By <b>Bhaumik</b> |
+                        <time datetime="2014-01-20">January 20th, 2014</time>
+                    </div>
+                    <div style='text-align:center'>
+                      <b>Primary meal + Secondary Meal + Salad + Smoothie</b></div>
+                      <hr>
+                    <div>
+                  <div style='text-align:center'>
+                      <h4 ><b style='color:green'>AED 199</b> for 7 MEALS</h4>
+                      <hr>
+                    
+                    
+                        This package comprises of various <b>fitness meals</b> which makes for excellent <b>weight-gain, weight-loss, get-lean</b> foods. <br> Choose this to get the most of your workouts and truly get in the best shape of your life!
+                    
+                    <hr>
+                    
+                        <a href="#" class="btn btn-success btn-sm">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
 				
 				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /w -->
-		<div class="container">
+      </div>
+    </div>
+			
+	
+		
 		<!-- 	<div class="row" style="margin-top:-40px">
 			<div class="col-lg-6" style="background-color:">
 				<h3 style='text-align:center; color:#5E5E5E;'>Fresh & Healthy Home Food.<br><b>Pay once, eat everyday!</b></h3>
@@ -133,13 +241,20 @@
 				<img src="{% static "img/chef-says-ok.png" %}" style="width:150px; height:150px;">
 				</div>
 		</div> --><!-- /row -->
-		
+		  <div id="c">
+    <div class="container">
+      <p style="color:#00ccdd; text-align:center">Delivering now in Dubai Marina and Tecom.</p>
+    
+    </div>
+  </div>
 
+
+    <div id="w">
 		
+		<div class="container">
+		<div class="row" style="margin-top:; ";>
 		
-		<div class="row" style="margin-top:";>
-		
-		<div class="col-lg-8"  style="margin-top:;">
+		<div class="col-lg-8"  style="margin-top:; text-align:center">
 			<h4 style='text-align:center'><b>Today's Meals</b></h4>
 			  
 
@@ -171,12 +286,14 @@
         <h5><b>ACTIVE INDIVIDUALS NEED TO EAT THE RIGHT FOODS TO PERFORM WELL. EATING THE RIGHT FOOD FOR DINNER IS VITAL TO HEALTHY LIVING.</b></h5>
       <h5 style="color:#7A7A7A"><b>THAT'S WHY WE STARTED FEASTY MEALS, TO DELIVER FRESH & HEALTHY FOOD TO PEOPLE FOR A HEALTHY LIFE</b></h5>  
       <h5><b>WITH FEASTY MEALS YOU CAN CHOOSE WEEKLY PACKAGES AND HAVE THE HEALTHIEST FOOD DELIVERED TO YOU EVERYDAY.</b></h5> 
-</div>
+
+ 
+          </div>
 
 <div class="col-lg-4 " style="background-color:; margin-top:px">
       
-        <div class="well" style="padding:10px; margin-top:-50px;">
-        <h3 style="color:#5E5E5E; text-align:center"><b>Register for a 3 day starter package</b> </h3>
+        <div class="well" style="padding:10px; margin-top:;">
+        <h3 style="color:#5E5E5E; text-align:"><b>Register for a 3 day starter package</b> </h3>
           <form method="POST" class="form-vertical">{% csrf_token %}
             
             <div class="form-class">
@@ -210,187 +327,65 @@
 	<!-- <div class="row" style="background-color:orange; margin-top:-600px;" >
 			<img class="img-responsive" src="{% static "img/food4.jpg" %}" alt="">
 			</div><!-- /col-lg-6 --> 
-		  
-			
+</div>
 
-
-
-
-		</div>
+  
 
 			
 		</div><!-- /container -->
-	</div><!-- /headerwrap -->
-</div>
- <h3 style='text-align:center; color:#4C4C4C;'><b><i>How it works</i></b></h3><br>
+
+
+
 <div class="container">
-		 <div class="row bs-wizard" style="border-bottom:0;">
+ <h3 style='text-align:center; color:#4C4C4C;'><b><i>How it works</i></b></h3><br>
+		 <div class="row bs-wizard" style="padding:25px;">
 
                 
                 <div class="col-xs-3 bs-wizard-step complete">
                   <div class="text-center bs-wizard-stepnum"><b>REGISTER</b></div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
-                  <div class="bs-wizard-info text-center">We offer VEG, NON-VEG and FITNESS Packages. Choose your package and sign up!</div>
+                  <div class="bs-wizard-info text-center" style="color:black">We offer VEG, NON-VEG and FITNESS Packages. Choose your package and sign up!</div>
                 </div>
                 
                 <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
                   <div class="text-center bs-wizard-stepnum"><b>ACTIVATE & CONFIRM</b></div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
-                  <div class="bs-wizard-info text-center">After you sign up, you will receive a phone call confirming your account and package.</div>
+                  <div class="bs-wizard-info text-center" style="color:black">After you sign up, you will receive a phone call confirming your account and package.</div>
                 </div>
                 
                 <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
                   <div class="text-center bs-wizard-stepnum"><b>PAY ONCE ON DELIVERY</b></div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
-                  <div class="bs-wizard-info text-center">You pay for the package when you receive your first meal.</div>
+                  <div class="bs-wizard-info text-center" style="color:black" >You pay for the package when you receive your first meal.</div>
                 </div>
                 
                 <div class="col-xs-3 bs-wizard-step complete"><!-- complete -->
                   <div class="text-center bs-wizard-stepnum"><b>EAT EVERYDAY</b></div>
                   <div class="progress"><div class="progress-bar"></div></div>
                   <a href="#" class="bs-wizard-dot"></a>
-                  <div class="bs-wizard-info text-center">Meals are deliverd to you everyday and on time.</div>
+                  <div class="bs-wizard-info text-center" style="color:black">Meals are deliverd to you everyday and on time.</div>
                 </div>
-            </div>
-        
-        
-        
-        
-        
-	</div>
-</div>
-	
-<div id="row" style="background-color:white">
-		<hr>
-			<h3 style='text-align:center; color:#4C4C4C;'><b><i>Our Dinner Packages</i></b></h3><h5 style='text-align:center; color:#4C4C4C;'>Our delicious dinners to offer nutritious meals all week long</h5>
-		<hr>
-		
-	</div><!-- /container -->
+            </div>      
+	     </div>
+    	
 
-
-
-
-
-
-	<div class="container">
-    <div class="row">
-        <div class="col-sm-4 col-md-4" >
-            <h4 style='text-align:center; background-color:white;padding:15px;'><b>VEG PACKAGE</b></h4>
-            <div class="post">
-                <div class="post-img-content">
-                    <img src="{% static "img/puloa.jpg" %}" style="width:400px;height:250px;overflow:hidden;"/>
-                    <span class="post-title">
-                        <b>Different Meal Everyday</b><br>
-                    	<b>Balanced Nutrition</b><br>
-                    	<b>Low Fat</b><br>
-                    	<b>Carbs</b><br>
-                    	<b>Fruits & Veggies</b></span>
-                </div>
-                <div class="content">
-                	<div class="author">
-                        <b>Veg Package</b> |
-                       
-                    </div>
-                    	<div style='text-align:center'>
-                    	<b>Primary meal + Salad + Fresh juice</b></div>
-                    	<hr>
-                    	<div style='text-align:center'>
-                    	<h4 ><b style='color:orange'>AED 149</b> for 7 MEALS</div>
-                    	<hr>
-
-                    <div>
-                    	This package is designed for <b>vegans</b> who love to stay <b>healthy and fit</b>. All the vegetables are <b>steam cooked</b> to retain their nutritional values and the meals are cooked with the <b>purest of oils.</b>
-                    	</div>
-                   	
-                    <hr>
-                  
-
-                    <div style='text-align:center'>
-                        <a href="{% url 'veg' %}" class="btn btn-warning btn-sm">View meals</a></div>
-                    </div>
-                </div>
-            </div>
-       
-        <div class="col-sm-4 col-md-4">
-        	<h4 style='text-align:center; background-color:white;padding:15px;'><b>NON-VEG PACKAGE</b></h4>
-            <div class="post">
-                <div class="post-img-content">
-                    <img src="{% static "img/no-oil.jpg" %}" style="width:455px;height:250px;overflow:hidden;" class="img-responsive" />
-                    <span class="post-title">
-                        <b>Different Meal Everyday</b><br>
-                        <b>Balanced Nutrition</b><br>
-                    	<b>Proteins</b><br>
-                    	<b>Carbs</b><br>
-                    	<b>Fruits & Veggies</b></span>
-                </div>
-                <div class="content">
-                    <div class="author">
-                         <b>Energy| Lean</b> |
-                        
-                    </div>
-                    <div style='text-align:center'>
-                    	<b>Primary meal + Salad + Fresh juice</b></div>
-                    	<hr>
-                    	<div style='text-align:center'>
-                    	<h4 ><b style='color:blue'>AED 169</b> for 7 MEALS</h4>
-                    	<hr>
-                    
-                        This package offers delicious <b>non-vegetarion</b> meals with least amount of un-saturated fats. Although most of the meals are comprised of <b>chicken</b> and <b>mutton</b>, <b>fish, prawns and beef</b> are also included.
-                    	<hr>
-                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-        	<h4 style='text-align:center; background-color:white;padding:15px;'><b>FITNESS PACKAGE</b></h4>
-            <div class="post">
-                <div class="post-img-content">
-                     <img src="{% static "img/s1.png" %}" style="width:455px;height:250px;overflow:hidden;" class="img-responsive" />
-                    <span class="post-title">
-                        <b>Calorie based</b><br>
-                    	<b>Weight Gain Package</b><br>
-                    	<b>Diet Package</b><br>
-                    	<b>Get Lean Package</b><br>
-                    	<b>Veg & Non-Veg</b></span>
-                </div>
-                <div class="content">
-                    <div class="author">
-                        By <b>Bhaumik</b> |
-                        <time datetime="2014-01-20">January 20th, 2014</time>
-                    </div>
-                    <div style='text-align:center'>
-                    	<b>Primary meal + Secondary Meal + Salad + Smoothie</b></div>
-                    	<hr>
-                    <div>
-               		<div style='text-align:center'>
-                    	<h4 ><b style='color:green'>AED 199</b> for 7 MEALS</h4>
-                    	<hr>
-                    
-                    
-                        This package comprises of various <b>fitness meals</b> which makes for excellent <b>weight-gain, weight-loss, get-lean</b> foods. <br> Choose this to get the most of your workouts and truly get in the best shape of your life!
-                    
-                    <hr>
-                    
-                        <a href="#" class="btn btn-success btn-sm">Read more</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+  <div id="c">
+    <div class="container">
+      <p style="color:#00ccdd">FEASY MEALS &#174 2014, An Indian Coffee House service.</p>
+    
     </div>
-</div>
-</div>
+  </div>
 
-		<hr>
-<div class="row" style="background-color:; " >
-	
+
+
+
+
 	
 
-	<hr>
-	</div>
+
 
 	
 
