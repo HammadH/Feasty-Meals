@@ -82,16 +82,24 @@
   <body>
 
     <!-- Fixed navbar -->
-    <div class="navbar navbar-default navbar-fixed-top">
-      <div class="container">
+    <div class="navbar navbar-default navbar-fixed-top" >
+      <div class="container" >
         <div class="navbar-header" >
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <h3 ><b><i>FEASTY MEALS</i></b></h4><p style="margin-top:-5px;">Everyday food for healthy living</p>
-		
+        
+          <div class="row" >
+        <h3 ><img src="{% static "img/logo_small.png" %}" style="width:95px;height:95px;overflow:hidden;"/>   <b><i>DAILY MEALS</i></b> by Indian Coffee House</h4>
+		</div>
+    <div class="row" style=" margin-left:100px; margin-top:-50px;">
+
+
+      <p><i>Everyday food for healthy living</i></p>
+
+  </div>
         </div>
         <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
@@ -108,10 +116,10 @@
 
 
 			
-		<div class="container" style='margin-top:70px'>
+		<div class="container" style='margin-top:100px'>
 			<div class="row">
 				<div class="col-lg-12">
-				<h3 style='text-align:center'>WELCOME TO <bold>FEASTY MEALS.</bold> <br><bold>WE DELIVER FRESH</bold> AND HEALTHY DINNER EVERYDAY.<br><h4 style='text-align:center'>Choose a weekly package and food will be delivered everyday.</h4></h3>
+				<h3 style='text-align:center'>WELCOME TO <bold>DAILY MEALS.</bold> <br><bold>WE DELIVER FRESH</bold> AND HEALTHY DINNER EVERYDAY.<br><h4 style='text-align:center'>Choose a weekly package and register to get your delivery started.</h4></h3>
 					
 
           <div class="container">
@@ -243,7 +251,7 @@
 		</div> --><!-- /row -->
 		  <div id="c">
     <div class="container">
-      <p style="color:#00ccdd; text-align:center">Delivering now in Dubai Marina and Tecom.</p>
+      <p style="color:#00ccdd; text-align:center">Now delivering in Dubai Marina and Tecom.</p>
     
     </div>
   </div>
@@ -293,7 +301,7 @@
 <div class="col-lg-4 " style="background-color:; margin-top:px">
       
         <div class="well" style="padding:10px; margin-top:;">
-        <h3 style="color:#5E5E5E; text-align:"><b>Register for a 3 day starter package</b> </h3>
+        <h3 style="color:#5E5E5E; text-align:"><b>Register to start DELIVERY</b> </h3>
           <form method="POST" class="form-vertical">{% csrf_token %}
             
             <div class="form-class">
@@ -374,7 +382,7 @@
 
   <div id="c">
     <div class="container">
-      <p style="color:#00ccdd">FEASY MEALS &#174 2014, An Indian Coffee House service.</p>
+    
     
     </div>
   </div>
@@ -393,7 +401,7 @@
 <div id="w">
 		<div class="container">
 			<div class="row">
-        <h3 style='text-align:center; color:#4C4C4C;'><b><i>Our Food</i></b></h3><h5 style='text-align:center;'><h5 style='text-align:center; color:#4C4C4C;'>Every meal is cooked with these values</h5><br>
+        
 				<div class="col-lg-3 ">
 				<img src="{% static "img/fresh.png" %}" class='img-circle'style="width:150px;height:150px;">
 				<h4>FRESH<bold> INGREDIENTS</bold>
