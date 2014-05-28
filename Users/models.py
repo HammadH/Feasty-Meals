@@ -110,8 +110,8 @@ def send_emails(sender, instance, created, **kwargs):
 		if created:
 			subject = "New Registration"
 			message = render_to_string('email_message.html', {'user':instance})
-			from_email = "eat@feastymeals.com"                 #common email to send out emails from feastymeals
-			recipient_list = ['registrations@feastymeals.com']   #this will be my email for user infos
+			from_email = "eat@ichdubai.com"                 #common email to send out emails from feastymeals
+			recipient_list = ['registrations@ichdubai.com']   #this will be my email for user infos
 			
 			subject_to_user = "Hello there!"
 			message_to_user = render_to_string('user_email_message.html', {'user':instance})

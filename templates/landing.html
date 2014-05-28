@@ -14,7 +14,7 @@
     <link rel="shortcut icon" href="{% static "img/favicon.png" %}">
     <link rel="stylesheet" href="{% static "css/font-awesome.min.css" %}">
 
-    <title>Feasty Meals: Eat Healthy, Live Well</title>
+    <title>Daily Meals: Eat Healthy, Live Well</title>
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
     <!-- Bootstrap core CSS -->
@@ -77,7 +77,19 @@
 /*END Form Wizard*/
 </style>
 
-  </head>
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-51311491-1', 'ichdubai.com');
+  ga('send', 'pageview');
+
+</script>
+
+</head>
 
   <body>
 
@@ -108,7 +120,7 @@
 
 <button type="submit" class="btn btn-primary btn-sm">Log In</button>
 </form></li> -->
-          <li style="margin-top:20px"><div class="alert alert-danger" style="text-align:center; ">CALL <b>0552051031</b> or <b>SIGN UP</b> BELOW</div></li>
+          <li style="margin-top:20px"><div class="alert alert-danger" style="text-align:center; ">CALL <b>0551390174</b> or <b>SIGN UP</b> BELOW</div></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -142,10 +154,10 @@
                        
                     </div>
                       <div style='text-align:center'>
-                      <b>Primary meal + Salad + Fresh juice</b></div>
+                      <b>Primary meal + Salad + Fresh juice (optional)</b></div>
                       <hr>
                       <div style='text-align:center'>
-                      <h4 ><b style='color:orange'>AED 149</b> for 7 MEALS</div>
+                      <h4 ><b style='color:orange'>AED 140</b> for 7 MEALS</div>
                       <hr>
 
                     <div>
@@ -156,7 +168,7 @@
                   
 
                     <div style='text-align:center'>
-                        <a href="{% url 'veg' %}" class="btn btn-warning btn-sm">View meals</a></div>
+                        <a href="{% url 'veg' %}" class="btn btn-warning btn-sm">See all meals</a></div>
                     </div>
                 </div>
             </div>
@@ -179,15 +191,15 @@
                         
                     </div>
                     <div style='text-align:center'>
-                      <b>Primary meal + Salad + Fresh juice</b></div>
+                      <b>Primary meal + Salad + Fresh juice (optional)</b></div>
                       <hr>
                       <div style='text-align:center'>
-                      <h4 ><b style='color:blue'>AED 169</b> for 7 MEALS</h4>
+                      <h4 ><b style='color:blue'>AED 160</b> for 7 MEALS</h4>
                       <hr>
                     
                         This package offers delicious <b>non-vegetarion</b> meals with least amount of un-saturated fats. Although most of the meals are comprised of <b>chicken</b> and <b>mutton</b>, <b>fish, prawns and beef</b> are also included.
                       <hr>
-                        <a href="#" class="btn btn-primary btn-sm">Read more</a>
+                        <a href="#" class="btn btn-primary btn-sm">See all meals</a>
                     </div>
                 </div>
             </div>
@@ -206,7 +218,7 @@
                 </div>
                 <div class="content">
                     <div class="author">
-                        By <b>Bhaumik</b> |
+                        <b>Fitness package</b> |
                         <time datetime="2014-01-20">January 20th, 2014</time>
                     </div>
                     <div style='text-align:center'>
@@ -222,7 +234,7 @@
                     
                     <hr>
                     
-                        <a href="#" class="btn btn-success btn-sm">Read more</a>
+                        <a href="#" class="btn btn-success btn-sm">See all meals</a>
                     </div>
                 </div>
             </div>
@@ -289,11 +301,11 @@
 </div>  
 </div>
   
-  <h4 style='text-align:center; margin:10px;'><b>WHY FEASTY MEALS?</b></h4>
+  <h4 style='text-align:center; margin:10px;'><b>WHY DAILY MEALS?</b></h4>
 <h5 style="color:#7A7A7A"><b>WE BELIEVE IN EATING HEALTHY FOOD, AND WE ALSO BELIEVE HEALTHY FOOD SHOULD NOT BE EXPENSIVE.</b></h5>
         <h5><b>ACTIVE INDIVIDUALS NEED TO EAT THE RIGHT FOODS TO PERFORM WELL. EATING THE RIGHT FOOD FOR DINNER IS VITAL TO HEALTHY LIVING.</b></h5>
-      <h5 style="color:#7A7A7A"><b>THAT'S WHY WE STARTED FEASTY MEALS, TO DELIVER FRESH & HEALTHY FOOD TO PEOPLE FOR A HEALTHY LIFE</b></h5>  
-      <h5><b>WITH FEASTY MEALS YOU CAN CHOOSE WEEKLY PACKAGES AND HAVE THE HEALTHIEST FOOD DELIVERED TO YOU EVERYDAY.</b></h5> 
+      <h5 style="color:#7A7A7A"><b>THAT'S WHY WE STARTED DAILY MEALS, TO DELIVER FRESH & HEALTHY FOOD TO PEOPLE FOR A HEALTHY LIFE</b></h5>  
+      <h5><b>WITH DAILY MEALS YOU CAN CHOOSE WEEKLY PACKAGES AND HAVE THE HEALTHIEST FOOD DELIVERED TO YOU EVERYDAY.</b></h5> 
 
  
           </div>
@@ -437,11 +449,12 @@
 					<br>
 					<div class="col-lg-4">
 						<h3><b>Send Us A Message:</b></h3>
-						<h3 style="color:#ff4411">eat@feastymeals.com</h3>
+						<h3 style="color:#ff4411">eat@ichdubai.com</h3>
 						<br>
 					</div>
 				
-					<div class="col-lg-4">	
+					<div class="col-lg-4" style="margin-bottom:10px;">	
+            <img src="{% static "img/logo_small.png" %}" style="width:150px;height:150px;overflow:hidden;"/>   
 					</div>
 					
 					<div class="col-lg-4">	
@@ -456,7 +469,7 @@
 	
 	<div id="c">
 		<div class="container">
-			<p style="color:#00ccdd">FEASY MEALS &#174 2014, An Indian Coffee House service.</p>
+			<p style="color:white">DAILY MEALS &#174 2014, An Indian Coffee House service.</p>
 		
 		</div>
 	</div>
