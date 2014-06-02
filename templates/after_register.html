@@ -35,20 +35,20 @@
     <![endif]-->
 
     <script type="text/javascript">
-var count = 15;
-var redirect = "http://www.ichdubai.com";
+// var count = 15;
+// var redirect = "http://www.ichdubai.com";
  
-function countDown(){
-    var timer = document.getElementById("timer");
-    if(count > 0){
-        count--;
-        timer.innerHTML = ""+count+"";
-        setTimeout("countDown()", 1000);
-    }else{
-        window.location.href = redirect;
-    }
-}
-</script>
+// function countDown(){
+//     var timer = document.getElementById("timer");
+//     if(count > 0){
+//         count--;
+//         timer.innerHTML = ""+count+"";
+//         setTimeout("countDown()", 1000);
+//     }else{
+//         window.location.href = redirect;
+//     }
+// }
+// </script>
  
 
 
@@ -59,16 +59,16 @@ function countDown(){
 	<div class="row" style="text-align:center">
 		<div class="alert alert-success">
             <img src="{% static "img/logo_small.png" %}" style="width:150px;height:150px;overflow:hidden;"/> 
-            <h3 style="text-align:center"><b>Thank you!</b><br><br> We have recieved your application. You will receive a confirmation call shortly.</h3>
+            <h3 style="text-align:center"><b>Thank you for choosing us!</b><br><br> Your package is being prepared. We will call you shortly.</h3>
             <br>
 
-
-            <h3>Redirecting back in</h3>
+            <h3 style="text-align:center">If you have any enquiry, please call us on <b>0551390174</b></h3>
+            
 
  
-            <span id="timer" style="text-align:center">
+            <!-- <span id="timer" style="text-align:center">
             <script type="text/javascript">countDown();</script>
-            </span>
+            </span> -->
 
 	</div>
 </div>
