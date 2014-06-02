@@ -109,8 +109,8 @@ TEMPLATE_DIRS = (
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.webfaction.com'
-EMAIL_HOST_USER='feasty'
-EMAIL_HOST_PASSWORD = 'quakeroats9'
-DEFAULT_FROM_EMAIL = 'eat@feastymeals.com'
-SERVER_EMAIL = 'eat@feastymeals.com'
+EMAIL_HOST_USER='ichdubai'
+EMAIL_HOST_PASSWORD = 'quakeroats'
+DEFAULT_FROM_EMAIL = 'eat@ichdubai.com'
+SERVER_EMAIL = 'eat@ichdubai.com'
 
