@@ -92,8 +92,7 @@
 </head>
 
   <body>
-
-    <!-- Fixed navbar -->
+<!-- Fixed navbar -->
     <div class="navbar navbar-default navbar-fixed-top" >
       <div class="container" >
         <div class="navbar-header" >
@@ -105,7 +104,7 @@
         
           <div class="row" >
         <h3 ><img src="{% static "img/logo_small.png" %}" style="width:95px;height:95px;overflow:hidden;"/>   <b><i>DAILY MEALS</i></b> by Indian Coffee House</h4>
-		</div>
+    </div>
     <div class="row" style=" margin-left:100px; margin-top:-50px;">
 
 
@@ -120,134 +119,90 @@
 
 <button type="submit" class="btn btn-primary btn-sm">Log In</button>
 </form></li> -->
-          <li style="margin-top:20px"><div class="alert alert-danger" style="text-align:center; ">CALL <b>0551390174</b> or <b>SIGN UP</b> BELOW</div></li>
+          <li style="margin-top:20px"><div class="alert alert-danger" style="text-align:center; ">To ORDER just <b>1</b> Meal for <b>22 AED</b><br>CALL <b>0551390174</b> </div></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
     </div>
 
 
-			
-		<div class="container" style='margin-top:100px'>
-			<div class="row">
-				<div class="col-lg-12">
-				<h3 style='text-align:center'>WELCOME TO <bold>DAILY MEALS.</bold> <br><bold>WE DELIVER FRESH</bold> AND HEALTHY DINNER EVERYDAY.<br><h4 style='text-align:center'>Choose a weekly package and register to get your delivery started.</h4></h3>
-					
 
-          <div class="container">
+<div class="container" style='margin-top:100px'>
+      <div class="row">
+        <div class="col-lg-12">
+        <h3 style='text-align:center'>WELCOME TO <bold>DAILY MEALS.</bold> <br><bold>WE DELIVER FRESH</bold> AND HEALTHY FOOD EVERYDAY.<br><h4 style='text-align:center'>Select a package to register or call 0551390174.</h4></h3>
+      </div>    
+</div>
+</div>
+
+  <div class="container" style="margin-top:30px">
     <div class="row">
-        <div class="col-sm-4 col-md-4" >
-            <h4 style='text-align:center; background-color:white;padding:15px;'><b>VEG PACKAGE</b></h4>
-            <div class="post">
-                <div class="post-img-content">
-                    <img src="{% static "img/puloa.jpg" %}" style="width:400px;height:250px;overflow:hidden;"/>
-                    <span class="post-title">
-                        <b>Different Meal Everyday</b><br>
-                      <b>Balanced Nutrition</b><br>
-                      <b>Low Fat</b><br>
-                      <b>Carbs</b><br>
-                      <b>Fruits & Veggies</b></span>
-                </div>
-                <div class="content">
-                  <div class="author">
-                        <b>Veg Package</b> |
-                       
-                    </div>
-                      <div style='text-align:center'>
-                      <b>Primary meal + Salad + Fresh juice (optional)</b></div>
+      <div class="col-lg-5" style=" padding:50px;">
+        <img src="{% static "img/combo.png" %}"  style="padding-left:60px;padding-right:60px;" class="img-responsive" />
+        <div style='padding:25px'>
+        <b>Rice + Roti + 2 Curries + Steam-fried vegetables + <br>Salad + Fresh juice (optional)</b>
                       <hr>
                       <div style='text-align:center'>
-                      <h4 ><b style='color:orange'>AED 140</b> for 7 MEALS</div>
+                      <h4 ><b>Veg</b> Package <b style='color:orange'>AED 110</b> for <b>5</b> MEALS</div>
+                      <h4 ><b>Non-Veg</b> Package <b style='color:orange'>AED 115</b> for <b>5</b> MEALS</div>
                       <hr>
 
+
                     <div>
-                      This package is designed for <b>vegans</b> who love to stay <b>healthy and fit</b>. All the vegetables are <b>steam cooked</b> to retain their nutritional values and the meals are cooked with the <b>purest of oils.</b>
-                      </div>
-                    
-                    <hr>
                   
+                      <h4 style="text-align:center">Pay once food is delivered everyday. From Sunday to Thursday.</h4>
+                      <hr>
 
-                    <div style='text-align:center'>
-                        <a href="{% url 'veg' %}" class="btn btn-warning btn-sm">See all meals</a></div>
-                    </div>
-                </div>
+                      <h4 style="text-align:center">Different Meal Everyday</h4>
+                      <hr>
+
+                      </div>
+                 </div>
+    
+
+      <div class="col-lg-7">
+<div class="well" style="padding:10px; margin-top:;">
+        <h3 style="color:#5E5E5E; text-align:center"><b>Register your lunch package!</b> </h3>
+          <form method="POST" class="form-vertical">{% csrf_token %}
+            
+            <div class="form-class">
+              {% bootstrap_form form  %}
             </div>
-       
-        <div class="col-sm-4 col-md-4">
-          <h4 style='text-align:center; background-color:white;padding:15px;'><b>NON-VEG PACKAGE</b></h4>
-            <div class="post">
-                <div class="post-img-content">
-                    <img src="{% static "img/no-oil.jpg" %}" style="width:455px;height:250px;overflow:hidden;" class="img-responsive" />
-                    <span class="post-title">
-                        <b>Different Meal Everyday</b><br>
-                        <b>Balanced Nutrition</b><br>
-                      <b>Proteins</b><br>
-                      <b>Carbs</b><br>
-                      <b>Fruits & Veggies</b></span>
-                </div>
-                <div class="content">
-                    <div class="author">
-                         <b>Energy| Lean</b> |
-                        
-                    </div>
-                    <div style='text-align:center'>
-                      <b>Primary meal + Salad + Fresh juice (optional)</b></div>
-                      <hr>
-                      <div style='text-align:center'>
-                      <h4 ><b style='color:blue'>AED 160</b> for 7 MEALS</h4>
-                      <hr>
-                    
-                        This package offers delicious <b>non-vegetarion</b> meals with least amount of un-saturated fats. Although most of the meals are comprised of <b>chicken</b> and <b>mutton</b>, <b>fish, prawns and beef</b> are also included.
-                      <hr>
-                        <a href="#" class="btn btn-primary btn-sm">See all meals</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-4 col-md-4">
-          <h4 style='text-align:center; background-color:white;padding:15px;'><b>FITNESS PACKAGE</b></h4>
-            <div class="post">
-                <div class="post-img-content">
-                     <img src="{% static "img/s1.png" %}" style="width:455px;height:250px;overflow:hidden;" class="img-responsive" />
-                    <span class="post-title">
-                        <b>Calorie based</b><br>
-                      <b>Weight Gain Package</b><br>
-                      <b>Diet Package</b><br>
-                      <b>Get Lean Package</b><br>
-                      <b>Veg & Non-Veg</b></span>
-                </div>
-                <div class="content">
-                    <div class="author">
-                        <b>Fitness package</b> |
-                        <time datetime="2014-01-20">January 20th, 2014</time>
-                    </div>
-                    <div style='text-align:center'>
-                      <b>Primary meal + Secondary Meal + Salad + Smoothie</b></div>
-                      <hr>
-                    <div>
-                  <div style='text-align:center'>
-                      <h4 ><b style='color:green'>AED 199</b> for 7 MEALS</h4>
-                      <hr>
-                    
-                    
-                        This package comprises of various <b>fitness meals</b> which makes for excellent <b>weight-gain, weight-loss, get-lean</b> foods. <br> Choose this to get the most of your workouts and truly get in the best shape of your life!
-                    
-                    <hr>
-                    
-                        <a href="#" class="btn btn-success btn-sm">See all meals</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-</div>
-				
-				</div>
+            {% if form.errors %}
+              {% for field in form %}
+                {% for error in field.errors %}
+                  <div class="alert alert-error">
+                    <strong>{{error|escape}}</strong>
+                  </div>
+                {% endfor %}
+              {% endfor %}
+              
+                {% for error in form.non_field_errors %}
+                  <div class="alert alert-error">
+                      <strong>{{ error|escape }}</strong>
+                  </div>
+                {% endfor %}
+            {% endif %}
+            
+            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+          </form> 
       </div>
     </div>
-			
-	
+     </div>
+      </div>
+
+<div class="container" style='text-align:center'>
+  <div class="row">
+
+      <h4 style='text-align:center; margin:10px;'><b>WHY DAILY MEALS?</b></h4>
+<h5 style="color:#7A7A7A"><b>WE BELIEVE IN EATING HEALTHY FOOD, AND WE ALSO BELIEVE HEALTHY FOOD SHOULD NOT BE EXPENSIVE.</b></h5>
+        <h5><b>ACTIVE INDIVIDUALS NEED TO EAT THE RIGHT FOODS TO PERFORM WELL. EATING THE RIGHT FOOD IS VITAL TO A HEALTHY LIFE STYLE.</b></h5>
+      <h5 style="color:#7A7A7A"><b>THAT'S WHY WE STARTED DAILY MEALS, TO DELIVER FRESH & HEALTHY FOOD TO PEOPLE.</b></h5>  
+      <h5><b>WITH DAILY MEALS YOU CAN CHOOSE WEEKLY PACKAGES AND HAVE THE HEALTHIEST FOOD DELIVERED TO YOU EVERYDAY.</b></h5> 
+
+    </div>
+  </div>
+
 		
 		<!-- 	<div class="row" style="margin-top:-40px">
 			<div class="col-lg-6" style="background-color:">
@@ -261,24 +216,26 @@
 				<img src="{% static "img/chef-says-ok.png" %}" style="width:150px; height:150px;">
 				</div>
 		</div> --><!-- /row -->
-		  <div id="c">
+		 <!--  <div id="c">
     <div class="container">
       <p style="color:#00ccdd; text-align:center">Now delivering in Dubai Marina and Tecom.</p>
     
     </div>
-  </div>
+  </div> -->
 
 
-    <div id="w">
+    <!-- <div id="w">
 		
 		<div class="container">
 		<div class="row" style="margin-top:; ";>
 		
 		<div class="col-lg-8"  style="margin-top:; text-align:center">
-			<h4 style='text-align:center'><b>Today's Meals</b></h4>
-			  
-
-        <div class="col-md-5 column productbox" style="margin:20px">
+			<h3 style='text-align:center; margin-bottom:25px;'><b>Everyday Lunch Meals</b></h3>
+			   <div class="row" styel="padding:40px">
+      <img src="{% static "img/food_box.png" %}" style="width:550px;height:395px;overflow:hidden;"/>
+        
+        </div> -->
+        <!-- <div class="col-md-5 column productbox" style="marin:20px">
           
           <h4 style='text-align:center'><b>Veg Meal</b></h4>
           {% thumbnail veg_meal.pic "460x250" crop='center' as im %}
@@ -299,25 +256,21 @@
     <div class="producttitle" style="text-align:center"><b>{{nonveg_meal.name}}</b></div>
     <div class="productprice"><div style="text-align:center; margin:15px;"><a href="#" class="btn btn-success btn-sm" role="button">View all Non-Veg Meals</a></div>
 </div>  
-</div>
+</div> -->
   
-  <h4 style='text-align:center; margin:10px;'><b>WHY DAILY MEALS?</b></h4>
-<h5 style="color:#7A7A7A"><b>WE BELIEVE IN EATING HEALTHY FOOD, AND WE ALSO BELIEVE HEALTHY FOOD SHOULD NOT BE EXPENSIVE.</b></h5>
-        <h5><b>ACTIVE INDIVIDUALS NEED TO EAT THE RIGHT FOODS TO PERFORM WELL. EATING THE RIGHT FOOD FOR DINNER IS VITAL TO HEALTHY LIVING.</b></h5>
-      <h5 style="color:#7A7A7A"><b>THAT'S WHY WE STARTED DAILY MEALS, TO DELIVER FRESH & HEALTHY FOOD TO PEOPLE FOR A HEALTHY LIFE</b></h5>  
-      <h5><b>WITH DAILY MEALS YOU CAN CHOOSE WEEKLY PACKAGES AND HAVE THE HEALTHIEST FOOD DELIVERED TO YOU EVERYDAY.</b></h5> 
+
 
  
-          </div>
+      
 
-<div class="col-lg-4 " style="background-color:; margin-top:px">
+<!-- <div class="col-lg-4 " style="background-color:; margin-top:px">
       
         <div class="well" style="padding:10px; margin-top:;">
-        <h3 style="color:#5E5E5E; text-align:"><b>Register to start DELIVERY</b> </h3>
+        <h3 style="color:#5E5E5E; text-align:"><b>Select your package here!</b> </h3>
           <form method="POST" class="form-vertical">{% csrf_token %}
             
             <div class="form-class">
-              {% bootstrap_form registrationForm  %}
+       
             </div>
             {% if form.errors %}
               {% for field in form %}
@@ -343,22 +296,13 @@
         <div class="col-lg-8"  style="margin-top:;">
       
 				
-			</div><!-- /row -->
-	<!-- <div class="row" style="background-color:orange; margin-top:-600px;" >
-			<img class="img-responsive" src="{% static "img/food4.jpg" %}" alt="">
-			</div><!-- /col-lg-6 --> 
-</div>
-
-  
-
-			
-		</div><!-- /container -->
-
-
+			</div /row -->
+<!-- 	<div class="row" style="background-color:orange; margin-top:-600px;" >
+			<img class="img-responsive" src="{% static "img/food4.jpg" %}" alt=""> -->
 
 <div class="container">
  <h3 style='text-align:center; color:#4C4C4C;'><b><i>How it works</i></b></h3><br>
-		 <div class="row bs-wizard" style="padding:25px;">
+     <div class="row bs-wizard" style="padding:25px;">
 
                 
                 <div class="col-xs-3 bs-wizard-step complete">
@@ -389,15 +333,8 @@
                   <div class="bs-wizard-info text-center" style="color:black">Meals are deliverd to you everyday and on time.</div>
                 </div>
             </div>      
-	     </div>
-    	
-
-  <div id="c">
-    <div class="container">
-    
-    
-    </div>
-  </div>
+       </div>
+ 
 
 
 
@@ -408,7 +345,7 @@
 
 
 	
-
+<!-- 
 
 <div id="w">
 		<div class="container">
@@ -434,13 +371,12 @@
 				<h4>SAVE<bold> MONEY</bold></h4>
 				</div>
 			</div>
-		</div><!-- /container -->
-	</div><!-- /w -->
-	
+		</div/container
+	</div><!
 	
 
 			
-<!-- ========== FOOTER SECTION ========== -->
+ ========== FOOTER SECTION ========== -->
 	<section id="contact" name="contact"></section>
 	<div id="">
 		<div class="container">

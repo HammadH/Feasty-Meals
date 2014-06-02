@@ -29,10 +29,10 @@ class UserRegistrationForm(forms.ModelForm):
 	email = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Activation email will be sent'}))
 	password = forms.CharField(widget=forms.PasswordInput)
 	meal_package = forms.ModelChoiceField(queryset=Package.objects.all(), widget=forms.RadioSelect(), empty_label=None)
-	mobile = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'You will recieve a call on this number'}))
+	mobile = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'You will recieve a confirmation call on this number'}))
 	area_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Name of your area'}))
 	building_name = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Name of your building'}))
-	room_no = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Your apartment number'}))
+	room_no = forms.CharField(widget=forms.TextInput(attrs={'placeholder':'Your office room number'}))
 	
 	class Meta:
 		model = User

@@ -54,7 +54,7 @@ class HomeView(View):
 			else:
 				print "invalid"
 				context = self.get_context()
-				context['registrationForm'] = UserRegistrationForm(request.POST)
+				context['form'] = UserRegistrationForm(request.POST)
 				return render_to_response('landing.html',  context, RequestContext(request))
 
 
@@ -72,7 +72,7 @@ class HomeView(View):
 				nonveg_meal = todays_meals[0] 
 			context = {
 				'loginForm': AuthForm(),
-				'registrationForm': UserRegistrationForm(),
+				'form': UserRegistrationForm(),
 				'veg_meal': veg_meal,
 				'nonveg_meal': nonveg_meal
 				}
@@ -80,7 +80,7 @@ class HomeView(View):
 			print e
 			context = {
 				'loginForm': AuthForm(),
-				'registrationForm': UserRegistrationForm(),
+				'form': UserRegistrationForm(),
 				}
 		return context
 
@@ -99,3 +99,29 @@ class NonVegView(View):
 class FitnessView(View):
 	def get(self, request, *args, **kwargs):
 		return render_to_response('fitness.html')
+
+class ComboRegistration(View):
+	def get(self, request, *args, **kwargs):
+		return render_to_response('package_selection.html', {'form': UserRegistrationForm()}, RequestContext(request))
+
+	def post(self, request, *args, **kwargs):
+
+		form = UserRegistrationForm(request.POST)
+		if form.is_valid():
+			
+			full_name = form.cleaned_data['full_name']
+			meal_package = form.cleaned_data['meal_package']
+			email = form.cleaned_data['email']
+			password = form.cleaned_data['password']
+			mobile = form.cleaned_data['mobile']
+			area = form.cleaned_data['area_name']
+			building = form.cleaned_data['building_name']
+			room = form.cleaned_data['room_no']
+			new_user = User.objects.create_user(full_name, meal_package, email, password, mobile, area, building, room)
+			new_user.save()
+			return HttpResponseRedirect('/after_register')
+		else:
+			
+			context = {}
+			context['form'] = UserRegistrationForm(request.POST)
+			return render_to_response('package_selection.html',  context, RequestContext(request))
