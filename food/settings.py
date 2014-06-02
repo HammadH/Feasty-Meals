@@ -69,6 +69,7 @@ DATABASES = {
         'PASSWORD': 'quakeroats9',
         'HOST': '127.0.0.1',
         'PORT': '',
+        'AUTOCOMMIT':'True',
     }
 }
 
